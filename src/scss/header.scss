@@ -1,0 +1,76 @@
+.header {
+	padding: toRem(30) 0;
+	border: 1px solid $mainColor;
+	@include adaptiveValue('padding-top', 30, 15);
+	@include adaptiveValue('padding-bottom', 30, 15);
+	position: relative;
+    z-index: 100;
+    background-color: #F9F9F9;
+	&__container {
+		column-gap: toRem(40);
+		align-items: center;
+		@media (min-width: $mobile) {
+			display: grid;
+			grid-template-columns: 1fr auto 1fr;
+		}
+		@media (max-width: $mobile) {
+			display: flex;
+		}
+		@media (max-width: $mobileSmall) {
+			gap: toRem(30);
+		}
+	}
+	&__menu {
+		@media (max-width: $mobile) {
+			order: 3;
+		}
+	}
+	&__logo {
+		@include adaptiveValue('width', 247, 120, 0, 1200, 768);
+		transition: transform 0.5s;
+        position: relative;
+        z-index: 5;
+		@media (any-hover: hover) {
+			&:hover {
+				transform: scale(1.05);
+			}
+		}
+		img {
+			max-width: 100%;
+		}
+	}
+	&__active {
+		display: flex;
+		justify-content: flex-end;
+		gap: toRem(20);
+		align-items: center;
+		@media (max-width: $mobile) {
+			flex: 1 1 auto;
+			gap: toRem(40);
+            position: relative;
+            z-index: 5;
+			@media (max-width: $mobileSmall) {
+				gap: toRem(30);
+			}
+		}
+	}
+	&__call {
+		font-size: toRem(16);
+		text-transform: uppercase;
+		@media (max-width: $mobileSmall) {
+			font-size: toRem(12);
+		}
+	}
+	&__cart-btn {
+		font-size: toRem(24);
+		transition:
+			color 0.3s,
+			transform 0.3s;
+		@media (any-hover: hover) {
+			&:hover {
+				transform: scale(1.2);
+				color: $darkVioletColor;
+			}
+		}
+	}
+}

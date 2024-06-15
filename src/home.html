@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+	@@include('html/_head.htm',{ "title":"HomePage" })
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page home">
+				<a href="#" class="special-offer"><span class="special-offer__text">отримай -10% на перше замовлення</span></a>
+				<section class="main-block">
+					<div class="main-block__container">
+						<div class="main-block__offer">
+							<h1 class="main-block__title">
+								Підбери свій
+								<span class="main-block__title--with-decor">власний</span>
+								Litty догляд
+							</h1>
+							<div class="main-block__text">
+								<p>Заощаджуй до 25%</p>
+								<p>+ отримай косметичку у подарунок</p>
+							</div>
+							<div class="main-block__button-wrapper"><a href="#" class="main-block__button button">зібрати кастомну косметичку</a></div>
+						</div>
+						<div class="main-block__image">
+							<img src="@img/home/main-image.png" alt="Group of cheerful teenagers" />
+						</div>
+					</div>
+				</section>
+				<div class="banners">
+					<div class="banners__swiper swiper">
+						<div class="banners__swiper-wrapper swiper-wrapper">
+							@@include('html/components/_banner.htm',{ "banner": "01.jpg"}) 
+							@@include('html/components/_banner.htm',{ "banner": "02.jpg"}) 
+							@@include('html/components/_banner.htm',{ "banner": "03.jpg"}) 
+							@@include('html/components/_banner.htm',{ "banner": "04.jpg"})
+						</div>
+					</div>
+				</div>
+				<section class="products">
+					<div class="products__container">
+						<div class="products__header">
+							<h2 class="products__title title">
+								<span class="title__small">маленькими кроками </span>
+								<span class="title__text">до великих результатів</span>
+							</h2>
+						</div>
+						<div class="products__swiper-area">
+							<div class="products__buttons">
+								<button class="products__button button swiper-button swiper-button-prev _icon-arrow-left"></button>
+								<button class="products__button button swiper-button swiper-button-next _icon-arrow-right"></button>
+							</div>
+							<div class="products__swiper swiper">
+								<div class="products__swiper-wrapper swiper-wrapper">
+									<div class="products__swiper-slide swiper-slide">
+										<div class="products__card card _blue">
+											<img src="@img/products/new.svg" alt="" class="card__special">
+											<a href="#" class="card__image">
+												<img src="@img/products/product-01.jpeg" alt="" />
+											</a>
+											<div class="card__body">
+												<h3 class="card__title">
+													<a href="#" class="card__title-link">#Сleansing foam</a>
+												</h3>
+												<div class="card__text">Засіб для очищення - допоможе одночасно очистити шкіру від бруду, макіяжу...</div>
+												<div class="card__info">
+													<span class="card__price">465 грн</span>
+													<a href="#" class="card__button button">Додати до кошика</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="products__swiper-slide swiper-slide">
+										<div class="products__card card _green">
+											<a href="#" class="card__image">
+												<img src="@img/products/product-02.jpeg" alt="" />
+											</a>
+											<div class="card__body">
+												<h3 class="card__title">
+													<a href="#" class="card__title-link">#Refreshing tonic&mist</a>
+												</h3>
+												<div class="card__text">Пожвавлюючий міст для обличчя, тонік, і спрей для фіксації макіяжу в одному!</div>
+												<div class="card__info">
+													<span class="card__price">390 грн</span>
+													<a href="#" class="card__button button">Додати до кошика</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="products__swiper-slide swiper-slide">
+										<div class="products__card card _violet">
+											<a href="#" class="card__image">
+												<img src="@img/products/product-03.jpeg" alt="" />
+											</a>
+											<div class="card__body">
+												<h3 class="card__title">
+													<a href="#" class="card__title-link">#Moisturizing cream-gel</a>
+												</h3>
+												<div class="card__text">Засіб, який інтенсивно зволожує, живить, та захищає шкіру...</div>
+												<div class="card__info">
+													<span class="card__price">600 грн</span>
+													<a href="#" class="card__button button">Додати до кошика</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="products__swiper-slide swiper-slide">
+										<div class="products__card card _orange">
+											<a href="#" class="card__image">
+												<img src="@img/products/product-04.jpeg" alt="" />
+											</a>
+											<div class="card__body">
+												<h3 class="card__title">
+													<a href="#" class="card__title-link">#Cream-gel with AНA acids</a>
+												</h3>
+												<div class="card__text">крем-гель для щоденного використання, зупиняє прищі ще до їхньої появи!</div>
+												<div class="card__info">
+													<span class="card__price">690 грн</span>
+													<a href="#" class="card__button button">Додати до кошика</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="products__swiper-slide swiper-slide">
+										<div class="products__card card _red">
+											<a href="#" class="card__image">
+												<img src="@img/products/product-05.jpeg" alt="" />
+											</a>
+											<div class="card__body">
+												<h3 class="card__title">
+													<a href="#" class="card__title-link">#SOS cream-раste</a>
+												</h3>
+												<div class="card__text">швидкодіюча паста, створена для вирішення проблем з вугровими висипами</div>
+												<div class="card__info">
+													<span class="card__price">570 грн</span>
+													<a href="#" class="card__button button">Додати до кошика</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="home-info">
+					<div class="home-info__container">
+						<div class="home-info__content">
+							<h2 class="home-info__title">our mission</h2>
+							<div class="home-info__text">
+								<p>Кожен підліток має право на доступний, якісний та сучасний догляд за шкірою. </p>
+								<p>Ми вважаємо своїм обов'язком створювати найкращі продукти для молодої шкіри та навчити користуватися ними ефективно.</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="reviews">
+					<div class="reviews__container">
+						<div class="reviews__header">
+							<h3 class="reviews__sub-title">єдиний випадок, коли тебе має хвилювати</h3>
+							<h2 class="reviews__title"><span class="reviews__title-text">що думають інші</span></h2>
+						</div>
+					</div>
+					<div class="reviews__body">
+						<div class="reviews__swiper swiper">
+							<div class="reviews__swiper-wrapper swiper-wrapper">
+								<div class="reviews__swiper-slide swiper-slide">
+									<article class="reviews__item item-reviews">
+										<div class="item-reviews__content">
+											<p>Пінка сподобалася! За відчуттями шкіра у дочки стала більш оксамитовою та чистою. Дитина задоволена покупкою</p>
+										</div>
+										<div class="item-reviews__footer">
+											<h4 class="item-reviews__title">
+												<span class="item-reviews__title-text">Ксенія, Киів</span>
+												<span class="item-reviews__title-check _icon-check"></span>
+											</h4>
+											<div class="item-reviews__sub-title">(покупка підтверджена)</div>
+										</div>
+									</article>
+								</div>
+								<div class="reviews__swiper-slide swiper-slide">
+									<article class="reviews__item item-reviews">
+										<div class="item-reviews__content">
+											<p>Тонік виконує свою функцію на всі 100. Очищує та зволожує шкіру. Відчуття свіжості після використання. Дякуємо.</p>
+										</div>
+										<div class="item-reviews__footer">
+											<h4 class="item-reviews__title">
+												<span class="item-reviews__title-text">Олена, Вінниця</span>
+												<span class="item-reviews__title-check _icon-check"></span>
+											</h4>
+											<div class="item-reviews__sub-title">(покупка підтверджена)</div>
+										</div>
+									</article>
+								</div>
+								<div class="reviews__swiper-slide swiper-slide">
+									<article class="reviews__item item-reviews">
+										<div class="item-reviews__content">
+											<p>У дочери проблемная кожа, за неделю использования крем снял воспаление, тон стал ровнее, новых прыщей не появляется, покупкой довольна.</p>
+										</div>
+										<div class="item-reviews__footer">
+											<h4 class="item-reviews__title">
+												<span class="item-reviews__title-text">Людмила, Київ</span>
+												<span class="item-reviews__title-check _icon-check"></span>
+											</h4>
+											<div class="item-reviews__sub-title">(покупка підтверджена)</div>
+										</div>
+									</article>
+								</div>
+								<div class="reviews__swiper-slide swiper-slide">
+									<article class="reviews__item item-reviews">
+										<div class="item-reviews__content">
+											<p>
+												Привіт! Придбали очищення та крем. Крем дуже добре зволожує, запах супер, дуже приємна, комфортна та легка текстура, на ранок обличчя м'яке та
+												зволожене.
+											</p>
+										</div>
+										<div class="item-reviews__footer">
+											<h4 class="item-reviews__title">
+												<span class="item-reviews__title-text">Наталія, Харків</span>
+												<span class="item-reviews__title-check _icon-check"></span>
+											</h4>
+											<div class="item-reviews__sub-title">(покупка підтверджена)</div>
+										</div>
+									</article>
+								</div>
+								<div class="reviews__swiper-slide swiper-slide">
+									<article class="reviews__item item-reviews">
+										<div class="item-reviews__content">
+											<p>
+												Привіт! Придбали очищення та крем. Крем дуже добре зволожує, запах супер, дуже приємна, комфортна та легка текстура, на ранок обличчя м'яке та
+												зволожене.
+											</p>
+										</div>
+										<div class="item-reviews__footer">
+											<h4 class="item-reviews__title">
+												<span class="item-reviews__title-text">Наталія, Харків</span>
+												<span class="item-reviews__title-check _icon-check"></span>
+											</h4>
+											<div class="item-reviews__sub-title">(покупка підтверджена)</div>
+										</div>
+									</article>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="instagram">
+					<div class="instagram__container">
+						<div class="instagram__header">
+							<div class="instagram__account account-instagram">
+								<a href="#" class="account-instagram__avatar">
+									<img src="@img/" alt="">
+								</a>
+								<div class="account-instagram__info">
+									<h2 class="account-instagram__title"><a class="account-instagram__title--link" href="">Доглядова косметика для підлітків 🛒</a></h2>
+									<div class="account-instagram__description">@litty.cosmetics</div>
+								</div>
+							</div>
+							<div class="instagram__info info-instagram">
+								<div class="info-instagram__part">
+									<span class="info-instagram__count">490</span>
+									<div class="info-instagram__label">posts</div>
+								</div>
+								<div class="info-instagram__part">
+									<span class="info-instagram__count">322K+</span>
+									<div class="info-instagram__label">followers</div>
+								</div>
+								<div class="info-instagram__part">
+									<span class="info-instagram__count">2</span>
+									<div class="info-instagram__label">following</div>
+								</div>
+							</div>
+							<a href="#" class="instagram__subscribe">Follow</a>
+						</div>
+						<div class="instagram__description">
+							<p>🖇️Втілюємо енергію та стиль молоді, пропонуючи інноваційні продукти для догляду за шкірою 12+</p>
+							<p>Замовляй у директі📩 або на сайті ↓</p>	
+						</div>
+						<div class="instagram__images">
+							<div class="instagram__image">
+								<img src="@img/" alt="">
+							</div>
+							<div class="instagram__image">
+								<img src="@img/" alt="">
+							</div>
+							<div class="instagram__image">
+								<img src="@img/" alt="">
+							</div>
+							<div class="instagram__image">
+								<img src="@img/" alt="">
+							</div>
+							<div class="instagram__image">
+								<img src="@img/" alt="">
+							</div>
+							<div class="instagram__image">
+								<img src="@img/" alt="">
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_js.htm',{})
+	</body>
+</html>

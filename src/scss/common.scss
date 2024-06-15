@@ -1,0 +1,209 @@
+// Заголовки, загальні БЕМ блоки та інше...
+// Pages
+//========================================================================================================================================================
+.home {
+	.special-offer {
+		margin-top: toRem(-1);
+	}
+}
+.page-shop {
+	&__main-block {
+	}
+}
+.page-about {
+	&__banner {
+	}
+}
+// Components
+//========================================================================================================================================================
+.link {
+	transition: color 0.3s;
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		bottom: -15px;
+		left: 0;
+		width: 100%;
+		height: toRem(1);
+		background-color: $darkVioletColor;
+		transition:
+			opacity 0.3s,
+			bottom 0.3s;
+		pointer-events: none;
+		opacity: 0;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			color: $darkVioletColor;
+			&::before {
+				bottom: -5px;
+				opacity: 1;
+			}
+		}
+	}
+	&:active {
+		&:hover {
+			color: $darkVioletColor;
+			&::before {
+				bottom: -5px;
+				opacity: 1;
+			}
+		}
+	}
+}
+.disabled {
+	pointer-events: none;
+}
+.special-offer {
+	border: 1px solid #000;
+	background: $lightVioletColor;
+	padding: toRem(10);
+	text-align: center;
+	font-weight: 700;
+	color: $whiteColor;
+	display: block;
+	position: relative;
+	z-index: 3;
+	&__text {
+		display: inline-block;
+		transition: transform 0.3s;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			.special-offer__text {
+				transform: scale(1.05);
+			}
+		}
+	}
+	&:active {
+		.special-offer__text {
+			transform: scale(1.05);
+		}
+	}
+}
+//========================================================================================================================================================
+.card {
+	position: relative;
+	padding-top: toRem(38);
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 72.106825%; /* 243/337 */
+		padding-bottom: 65.875371%; /* 222/337 */
+		filter: blur(100px);
+		z-index: -1;
+		border-radius: 50%;
+	}
+	&._blue::before {
+		background-color: #abd7f0;
+	}
+	&._green::before {
+		background-color: #d9fe59;
+	}
+	&._violet::before {
+		background-color: $darkVioletColor;
+	}
+	&._orange::before {
+		background-color: #fd8356;
+	}
+	&._red::before {
+		background-color: #fe1f01;
+	}
+	&__special {
+		max-width: 100%;
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 2;
+		@media (max-width:$mobile){
+			max-width: 70%;
+		}
+	}
+	&__image {
+		position: relative;
+		display: block;
+		border-radius: 150px;
+		overflow: hidden;
+		border: 1px solid #949494;
+		margin: 0 toRem(25) 0;
+		aspect-ratio: 278/417;
+		@media (max-width:$mobileSmall){
+			border-radius: 100px;
+		}
+		&:not(:last-child) {
+			margin-bottom: toRem(25);
+		}
+		@media (any-hover: hover) {
+			&:hover img {
+				transform: scale(1.05);
+			}
+		}
+		img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+			transition: transform 0.3s;
+		}
+	}
+	&__body {
+		text-align: center;
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+	}
+	&__title {
+		@include adaptiveValue('font-size', 22, 16);
+		font-weight: 500;
+		line-height: 1.1;
+		&:not(:last-child) {
+			margin-bottom: toRem(12);
+		}
+	}
+	&__title-link {
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	&__text {
+		line-height: 1.6;
+		font-weight: 300;
+		margin-bottom: toRem(13);
+		flex: 1 1 auto;
+	}
+	&__info {
+		display: flex;
+		gap: toRem(10);
+		justify-content: center;
+		@media (min-width: $tablet) {
+			@media (max-width: toRem(1100)) {
+				flex-direction: column-reverse;
+			}
+		}
+		@media (max-width: $mobile) {
+			flex-direction: column-reverse;
+		}
+	}
+	&__price {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		padding: toRem(5) toRem(8);
+		border-radius: 15px;
+		border: 0.5px solid $blackColor;
+		background-color: $whiteColor;
+		min-height: toRem(30);
+	}
+	&__button {
+	}
+}
