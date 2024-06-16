@@ -4,8 +4,17 @@
 	@include adaptiveValue('padding-top', 30, 15);
 	@include adaptiveValue('padding-bottom', 30, 15);
 	position: relative;
-    z-index: 100;
-    background-color: #F9F9F9;
+	z-index: 100;
+	background-color: #f9f9f9;
+	opacity: 0;
+	transform: translateY(-30px);
+	.loaded & {
+		transition:
+			opacity 0.5s,
+			transform 0.5s;
+		opacity: 1;
+		transform: translate(0);
+	}
 	&__container {
 		column-gap: toRem(40);
 		align-items: center;
@@ -28,8 +37,8 @@
 	&__logo {
 		@include adaptiveValue('width', 247, 120, 0, 1200, 768);
 		transition: transform 0.5s;
-        position: relative;
-        z-index: 5;
+		position: relative;
+		z-index: 5;
 		@media (any-hover: hover) {
 			&:hover {
 				transform: scale(1.05);
@@ -47,8 +56,8 @@
 		@media (max-width: $mobile) {
 			flex: 1 1 auto;
 			gap: toRem(40);
-            position: relative;
-            z-index: 5;
+			position: relative;
+			z-index: 5;
 			@media (max-width: $mobileSmall) {
 				gap: toRem(30);
 			}

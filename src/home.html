@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="uk">
 	@@include('html/_head.htm',{ "title":"HomePage" })
 	<body>
 		<div class="wrapper">
@@ -25,7 +25,7 @@
 						</div>
 					</div>
 				</section>
-				<div class="banners">
+				<div data-watch data-watch-once class="banners">
 					<div class="banners__swiper swiper">
 						<div class="banners__swiper-wrapper swiper-wrapper">
 							@@include('html/components/_banner.htm',{ "banner": "01.jpg"}) @@include('html/components/_banner.htm',{ "banner": "02.jpg"}) @@include('html/components/_banner.htm',{
@@ -36,12 +36,12 @@
 				<section class="products">
 					<div class="products__container">
 						<div class="products__header">
-							<h2 class="products__title title">
+							<h2 data-watch class="products__title title">
 								<span class="title__small">маленькими кроками </span>
 								<span class="title__text">до великих результатів</span>
 							</h2>
 						</div>
-						<div class="products__swiper-area">
+						<div data-watch class="products__swiper-area">
 							<div class="products__buttons">
 								<button class="products__button button swiper-button swiper-button-prev _icon-arrow-left"></button>
 								<button class="products__button button swiper-button swiper-button-next _icon-arrow-right"></button>
@@ -139,7 +139,7 @@
 						</div>
 					</div>
 				</section>
-				<section class="home-info">
+				<section data-watch data-watch-once class="home-info">
 					<div class="home-info__container">
 						<div class="home-info__content">
 							<h2 class="home-info__title">our mission</h2>
@@ -240,60 +240,12 @@
 						</div>
 					</div>
 				</section>
-				<section class="instagram">
+				<div class="instagram">
 					<div class="instagram__container">
-						<div class="instagram__header">
-							<div class="instagram__account account-instagram">
-								<a href="https://www.instagram.com/litty.cosmetics" target="_blank"  class="account-instagram__avatar">
-									<img src="@img/" alt="" />
-								</a>
-								<div class="account-instagram__info">
-									<h2 class="account-instagram__title"><a class="account-instagram__title--link" href="https://www.instagram.com/litty.cosmetics" target="_blank" >Доглядова косметика для підлітків 🛒</a></h2>
-									<div class="account-instagram__description">@litty.cosmetics</div>
-								</div>
-							</div>
-							<div class="instagram__info info-instagram">
-								<div class="info-instagram__part">
-									<span class="info-instagram__count">490</span>
-									<div class="info-instagram__label">posts</div>
-								</div>
-								<div class="info-instagram__part">
-									<span class="info-instagram__count">322K+</span>
-									<div class="info-instagram__label">followers</div>
-								</div>
-								<div class="info-instagram__part">
-									<span class="info-instagram__count">2</span>
-									<div class="info-instagram__label">following</div>
-								</div>
-							</div>
-							<a href="https://www.instagram.com/litty.cosmetics" target="_blank" class="instagram__subscribe">Follow</a>
-						</div>
-						<div class="instagram__description">
-							<p>🖇️Втілюємо енергію та стиль молоді, пропонуючи інноваційні продукти для догляду за шкірою 12+</p>
-							<p>Замовляй у директі📩 або на сайті ↓</p>
-						</div>
-						<div class="instagram__images">
-							<div class="instagram__image">
-								<img src="@img/" alt="" />
-							</div>
-							<div class="instagram__image">
-								<img src="@img/" alt="" />
-							</div>
-							<div class="instagram__image">
-								<img src="@img/" alt="" />
-							</div>
-							<div class="instagram__image">
-								<img src="@img/" alt="" />
-							</div>
-							<div class="instagram__image">
-								<img src="@img/" alt="" />
-							</div>
-							<div class="instagram__image">
-								<img src="@img/" alt="" />
-							</div>
-						</div>
+						<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+						<div class="elfsight-app-26bdb88f-8b1a-4b24-b4dd-177aa578bba4" data-elfsight-app-lazy></div>
 					</div>
-				</section>
+				</div>
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>

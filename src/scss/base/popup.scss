@@ -91,6 +91,10 @@ body::after {
 				transform: scale(1.5);
 			}
 		}
+		@media (max-width:$mobile){
+			top: toRem(10);
+			right: toRem(10);
+		}
 	}
 	&__body {
 		max-width: toRem(670);

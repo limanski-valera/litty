@@ -26,6 +26,15 @@
 				margin-bottom: toRem(70);
 			}
 		}
+		opacity: 0;
+		transform: translateX(-30px);
+		.loaded & {
+			transition:
+				opacity 0.5s 0.3s,
+				transform 0.5s 0.3s;
+			opacity: 1;
+			transform: translate(0);
+		}
 	}
 	&__title {
 		@include adaptiveValue('font-size', 52, 24);
@@ -160,10 +169,28 @@
 			left: 0;
 			transform: translate(-30%, 70%);
 		}
+		opacity: 0;
+		transform: translateY(30px);
+		.loaded & {
+			transition:
+				opacity 0.5s 0.5s,
+				transform 0.5s 0.5s;
+			opacity: 1;
+			transform: translate(0);
+		}
 	}
 }
 //====================================================================================================
 .banners {
+	opacity: 0.5;
+	transform: translateY(30px);
+	&._watcher-view {
+		transition:
+			opacity 0.5s,
+			transform 0.5s;
+		opacity: 1;
+		transform: translate(0);
+	}
 	&__swiper {
 	}
 	&__swiper-wrapper {
@@ -197,6 +224,17 @@
 	&__title {
 		align-self: center;
 		position: relative;
+		&[data-watch] {
+			opacity: 0;
+			transform: translateX(30px);
+			&._watcher-view {
+				transition:
+					opacity 0.3s,
+					transform 0.3s;
+				opacity: 1;
+				transform: translate(0);
+			}
+		}
 		&::before,
 		&::after {
 			content: '';
@@ -267,6 +305,17 @@
 		}
 		@media (max-width: $mobile) {
 			padding: 0 toRem(50);
+		}
+		&[data-watch] {
+			opacity: 0;
+			transform: translateY(30px);
+			&._watcher-view {
+				transition:
+					opacity 0.3s,
+					transform 0.3s;
+				opacity: 1;
+				transform: translate(0);
+			}
 		}
 	}
 	&__buttons {
@@ -364,6 +413,15 @@
 	@include adaptiveValue('padding-top', 100, 50);
 	@include adaptiveValue('padding-bottom', 100, 50);
 	background: url('@img/home/info-bg.svg') center center / cover no-repeat;
+	opacity: 0;
+	transform: scale(1.1);
+	&._watcher-view {
+		transition:
+			opacity 0.3s,
+			transform 0.3s;
+		opacity: 1;
+		transform: scale(1);
+	}
 	&__container {
 		@media (max-width: $mobileSmall) {
 			padding: 0 toRem(10);
@@ -381,6 +439,15 @@
 		box-shadow: 15px 24px 14.8px 0px rgba(0, 0, 0, 0.25);
 		@media (max-width: $mobile) {
 			padding: toRem(30) toRem(15) toRem(40);
+		}
+		opacity: 0;
+		transform: translateY(30px);
+		._watcher-view & {
+			transition:
+				opacity 0.3s 0.3s,
+				transform 0.3s 0.3s;
+			opacity: 1;
+			transform: translate(0);
 		}
 	}
 	&__title {

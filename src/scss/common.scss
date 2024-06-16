@@ -4,6 +4,15 @@
 .home {
 	.special-offer {
 		margin-top: toRem(-1);
+		opacity: 0;
+		transform: scale(1.2);
+		.loaded & {
+			transition:
+				opacity 0.5s,
+				transform 0.5s;
+			opacity: 1;
+			transform: scale(1);
+		}
 	}
 }
 .page-shop {
@@ -55,6 +64,7 @@
 .disabled {
 	pointer-events: none;
 }
+//========================================================================================================================================================
 .special-offer {
 	border: 1px solid #000;
 	background: $lightVioletColor;
@@ -68,6 +78,7 @@
 	&__text {
 		display: inline-block;
 		transition: transform 0.3s;
+		animation: specialOfferText 2s infinite linear;
 	}
 	@media (any-hover: hover) {
 		&:hover {
@@ -82,6 +93,18 @@
 		}
 	}
 }
+@keyframes specialOfferText {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.2);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+//========================================================================================================================================================
 .text-block {
 	font-weight: 300;
 	line-height: 1.4;

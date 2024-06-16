@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="uk">
 	@@include('html/_head.htm',{ "title":"Review" })
 	<body>
 		<div class="wrapper">
@@ -107,13 +107,14 @@
 								<option value="parent">Батьки</option>
 							</select>
 							<textarea name="review" placeholder="ваш відгук" required class="send-review__textarea input"></textarea>
-							<button class="send-review__button button" type="submot">відправити</button>
+							<button class="send-review__button button" type="submit">відправити</button>
 						</form>
 					</div>
 				</section>
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>
+		@@include('html/_popup-product.htm')
 		@@include('html/_js.htm',{})
 	</body>
 </html>
