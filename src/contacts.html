@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+	@@include('html/_head.htm',{ "title":"Contacts" })
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{}) @@include('html/_cart.htm')
+			<main class="page">
+				<section class="contacts-main">
+					<div class="contacts-main__container">
+						<h1 class="contacts-main__title">Маєте запитання?</h1>
+					</div>
+					<img class="contacts-main__img" src="@img/contacts-main.png" alt="" />
+					<img class="contacts-main__decor" src="@img/contacts-main-line.svg" alt="" />
+				</section>
+				<div class="contacts-info">
+					<div class="contacts-info__container">
+						<div class="contacts-info__text">
+							Якщо вас цікавить замовлення, наша продукція або щось інше, напишіть нам: <a href="mailto:help@litty.com" class="simple-link">help@litty.com</a> / або зателефонуйте нам:
+							<a href="tel:5108714653" class="simple-link">510-871-4653</a>
+						</div>
+						<div class="contacts-info__attention">Перегляньте вкладку «дізнатися», можливо відповідь на ваше запитання вже там.</div>
+					</div>
+				</div>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_js.htm',{})
+	</body>
+</html>

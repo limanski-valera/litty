@@ -82,6 +82,29 @@
 		}
 	}
 }
+.text-block {
+	font-weight: 300;
+	line-height: 1.4;
+	color: $blackColor;
+	li {
+		padding-left: toRem(15);
+		position: relative;
+		&::before {
+			content: '';
+			position: absolute;
+			top: toRem(10);
+			left: toRem(5);
+			width: toRem(3);
+			height: toRem(3);
+			border-radius: 50%;
+			background-color: $blackColor;
+		}
+	}
+	p:not(:last-child),
+	li:not(:last-child) {
+		margin-bottom: toRem(20);
+	}
+}
 //========================================================================================================================================================
 .card {
 	position: relative;
@@ -121,7 +144,7 @@
 		top: 0;
 		right: 0;
 		z-index: 2;
-		@media (max-width:$mobile){
+		@media (max-width: $mobile) {
 			max-width: 70%;
 		}
 	}
@@ -133,7 +156,7 @@
 		border: 1px solid #949494;
 		margin: 0 toRem(25) 0;
 		aspect-ratio: 278/417;
-		@media (max-width:$mobileSmall){
+		@media (max-width: $mobileSmall) {
 			border-radius: 100px;
 		}
 		&:not(:last-child) {

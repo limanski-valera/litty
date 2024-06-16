@@ -13,17 +13,16 @@ textarea {
 	display: block;
 	border: 1px solid $blackColor;
 	caret-color: inherit;
-	border-radius: 30px;
 	padding: toRem(16) toRem(19);
 	background-color: $whiteColor;
 	color: #949494;
 	font-size: toRem(17);
-	font-weight: 500;
 	letter-spacing: 0.312px;
 	text-transform: uppercase;
 	border-radius: 30px !important;
 	outline: none;
 	transition: border-color 0.3s;
+	font-weight: 300;
 	&:focus {
 		border-color: $greenColor;
 	}
@@ -40,8 +39,8 @@ textarea {
 		opacity: 0;
 	}
 }
-
 textarea.input {
 	resize: none;
-	padding: 0px 0px;
+	padding: toRem(25) toRem(30);
+	min-height: toRem(182);
 }

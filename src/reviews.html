@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+	@@include('html/_head.htm',{ "title":"Review" })
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{}) @@include('html/_cart.htm')
+			<main class="page">
+				<section class="reviews">
+					<div class="reviews__container">
+						<div class="reviews__header">
+							<h3 class="reviews__sub-title">єдиний випадок, коли тебе має хвилювати</h3>
+							<h2 class="reviews__title"><span class="reviews__title-text">що думають інші</span></h2>
+						</div>
+					</div>
+					<div class="reviews__body">
+						<div class="reviews__swiper swiper">
+							<div class="reviews__swiper-wrapper swiper-wrapper">
+								<div class="reviews__swiper-slide swiper-slide">
+									<article class="reviews__item item-reviews">
+										<div class="item-reviews__content">
+											<p>Пінка сподобалася! За відчуттями шкіра у дочки стала більш оксамитовою та чистою. Дитина задоволена покупкою</p>
+										</div>
+										<div class="item-reviews__footer">
+											<h4 class="item-reviews__title">
+												<span class="item-reviews__title-text">Ксенія, Киів</span>
+												<span class="item-reviews__title-check _icon-check"></span>
+											</h4>
+											<div class="item-reviews__sub-title">(покупка підтверджена)</div>
+										</div>
+									</article>
+								</div>
+								<div class="reviews__swiper-slide swiper-slide">
+									<article class="reviews__item item-reviews">
+										<div class="item-reviews__content">
+											<p>Тонік виконує свою функцію на всі 100. Очищує та зволожує шкіру. Відчуття свіжості після використання. Дякуємо.</p>
+										</div>
+										<div class="item-reviews__footer">
+											<h4 class="item-reviews__title">
+												<span class="item-reviews__title-text">Олена, Вінниця</span>
+												<span class="item-reviews__title-check _icon-check"></span>
+											</h4>
+											<div class="item-reviews__sub-title">(покупка підтверджена)</div>
+										</div>
+									</article>
+								</div>
+								<div class="reviews__swiper-slide swiper-slide">
+									<article class="reviews__item item-reviews">
+										<div class="item-reviews__content">
+											<p>У дочери проблемная кожа, за неделю использования крем снял воспаление, тон стал ровнее, новых прыщей не появляется, покупкой довольна.</p>
+										</div>
+										<div class="item-reviews__footer">
+											<h4 class="item-reviews__title">
+												<span class="item-reviews__title-text">Людмила, Київ</span>
+												<span class="item-reviews__title-check _icon-check"></span>
+											</h4>
+											<div class="item-reviews__sub-title">(покупка підтверджена)</div>
+										</div>
+									</article>
+								</div>
+								<div class="reviews__swiper-slide swiper-slide">
+									<article class="reviews__item item-reviews">
+										<div class="item-reviews__content">
+											<p>
+												Привіт! Придбали очищення та крем. Крем дуже добре зволожує, запах супер, дуже приємна, комфортна та легка текстура, на ранок обличчя м'яке та
+												зволожене.
+											</p>
+										</div>
+										<div class="item-reviews__footer">
+											<h4 class="item-reviews__title">
+												<span class="item-reviews__title-text">Наталія, Харків</span>
+												<span class="item-reviews__title-check _icon-check"></span>
+											</h4>
+											<div class="item-reviews__sub-title">(покупка підтверджена)</div>
+										</div>
+									</article>
+								</div>
+								<div class="reviews__swiper-slide swiper-slide">
+									<article class="reviews__item item-reviews">
+										<div class="item-reviews__content">
+											<p>
+												Привіт! Придбали очищення та крем. Крем дуже добре зволожує, запах супер, дуже приємна, комфортна та легка текстура, на ранок обличчя м'яке та
+												зволожене.
+											</p>
+										</div>
+										<div class="item-reviews__footer">
+											<h4 class="item-reviews__title">
+												<span class="item-reviews__title-text">Наталія, Харків</span>
+												<span class="item-reviews__title-check _icon-check"></span>
+											</h4>
+											<div class="item-reviews__sub-title">(покупка підтверджена)</div>
+										</div>
+									</article>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="send-review">
+					<div class="send-review__container">
+						<h2 class="send-review__title title">розкажіть про свій особистий досвід</h2>
+						<form action="#" class="send-review__form">
+							<input type="text" placeholder="ваше ім'я" name="name" required class="send-review__input input" />
+							<input type="text" placeholder="місто проживання" name="city" required class="send-review__input input" />
+							<select name="category" class="custom-select" required>
+								<option value="" selected disabled>підліток / батьки</option>
+								<option value="teenager">Підліток</option>
+								<option value="parent">Батьки</option>
+							</select>
+							<textarea name="review" placeholder="ваш відгук" required class="send-review__textarea input"></textarea>
+							<button class="send-review__button button" type="submot">відправити</button>
+						</form>
+					</div>
+				</section>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_js.htm',{})
+	</body>
+</html>

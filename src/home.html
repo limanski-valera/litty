@@ -3,9 +3,9 @@
 	@@include('html/_head.htm',{ "title":"HomePage" })
 	<body>
 		<div class="wrapper">
-			@@include('html/_header.htm',{})
+			@@include('html/_header.htm',{}) @@include('html/_cart.htm')
 			<main class="page home">
-				<a href="#" class="special-offer"><span class="special-offer__text">отримай -10% на перше замовлення</span></a>
+				<a href="#" data-popup="#popup" class="special-offer"><span class="special-offer__text">отримай -10% на перше замовлення</span></a>
 				<section class="main-block">
 					<div class="main-block__container">
 						<div class="main-block__offer">
@@ -28,10 +28,8 @@
 				<div class="banners">
 					<div class="banners__swiper swiper">
 						<div class="banners__swiper-wrapper swiper-wrapper">
-							@@include('html/components/_banner.htm',{ "banner": "01.jpg"}) 
-							@@include('html/components/_banner.htm',{ "banner": "02.jpg"}) 
-							@@include('html/components/_banner.htm',{ "banner": "03.jpg"}) 
-							@@include('html/components/_banner.htm',{ "banner": "04.jpg"})
+							@@include('html/components/_banner.htm',{ "banner": "01.jpg"}) @@include('html/components/_banner.htm',{ "banner": "02.jpg"}) @@include('html/components/_banner.htm',{
+							"banner": "03.jpg"}) @@include('html/components/_banner.htm',{ "banner": "04.jpg"})
 						</div>
 					</div>
 				</div>
@@ -52,8 +50,8 @@
 								<div class="products__swiper-wrapper swiper-wrapper">
 									<div class="products__swiper-slide swiper-slide">
 										<div class="products__card card _blue">
-											<img src="@img/products/new.svg" alt="" class="card__special">
-											<a href="#" class="card__image">
+											<img src="@img/products/new.svg" alt="" class="card__special" />
+											<a href="#" data-popup="#popup-product" class="card__image">
 												<img src="@img/products/product-01.jpeg" alt="" />
 											</a>
 											<div class="card__body">
@@ -247,7 +245,7 @@
 						<div class="instagram__header">
 							<div class="instagram__account account-instagram">
 								<a href="#" class="account-instagram__avatar">
-									<img src="@img/" alt="">
+									<img src="@img/" alt="" />
 								</a>
 								<div class="account-instagram__info">
 									<h2 class="account-instagram__title"><a class="account-instagram__title--link" href="">Доглядова косметика для підлітків 🛒</a></h2>
@@ -272,26 +270,26 @@
 						</div>
 						<div class="instagram__description">
 							<p>🖇️Втілюємо енергію та стиль молоді, пропонуючи інноваційні продукти для догляду за шкірою 12+</p>
-							<p>Замовляй у директі📩 або на сайті ↓</p>	
+							<p>Замовляй у директі📩 або на сайті ↓</p>
 						</div>
 						<div class="instagram__images">
 							<div class="instagram__image">
-								<img src="@img/" alt="">
+								<img src="@img/" alt="" />
 							</div>
 							<div class="instagram__image">
-								<img src="@img/" alt="">
+								<img src="@img/" alt="" />
 							</div>
 							<div class="instagram__image">
-								<img src="@img/" alt="">
+								<img src="@img/" alt="" />
 							</div>
 							<div class="instagram__image">
-								<img src="@img/" alt="">
+								<img src="@img/" alt="" />
 							</div>
 							<div class="instagram__image">
-								<img src="@img/" alt="">
+								<img src="@img/" alt="" />
 							</div>
 							<div class="instagram__image">
-								<img src="@img/" alt="">
+								<img src="@img/" alt="" />
 							</div>
 						</div>
 					</div>
@@ -299,6 +297,6 @@
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>
-		@@include('html/_js.htm',{})
+		@@include('html/_popup.htm') @@include('html/_popup-product.htm') @@include('html/_js.htm',{})
 	</body>
 </html>

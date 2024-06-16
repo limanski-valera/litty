@@ -1,6 +1,6 @@
 body::after {
-	content: "";
-	background-color: rgba(0, 0, 0, 0.5);
+	content: '';
+	background-color: rgba(83, 78, 121, 0.45);
 	position: fixed;
 	width: 100%;
 	height: 100%;
@@ -47,15 +47,244 @@ body::after {
 	align-items: center;
 }
 .popup__content {
+	overflow: hidden;
 	visibility: hidden;
 	transform: scale(0);
 	transition: transform 0.3s ease 0s;
-	background-color: #eee;
+	background-color: #f9f9f9;
 	padding: 20px;
 	width: 100%;
-	max-width: 900px;
-	border-radius: 20px;
+	max-width: toRem(800);
+	@include adaptiveValue('padding-top', 130, 40);
+	@include adaptiveValue('padding-bottom', 130, 40);
+	border-radius: 30px;
+	border: 1px solid $blackColor;
+	position: relative;
 	.lock & {
 		visibility: visible;
+	}
+	.popup-product & {
+		padding: toRem(70);
+		max-width: toRem(1150);
+		border: none;
+		@media (max-width: $mobile) {
+			padding: toRem(50) toRem(20);
+		}
+	}
+}
+.popup {
+	&__close {
+		position: absolute;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		width: toRem(40);
+		height: toRem(40);
+		font-size: toRem(12);
+		color: #373f47;
+		top: toRem(30);
+		right: toRem(30);
+		outline: none;
+		transition: transform 0.3s;
+		@media (any-hover: hover) {
+			&:hover {
+				transform: scale(1.5);
+			}
+		}
+	}
+	&__body {
+		max-width: toRem(670);
+		margin: 0 auto;
+		.popup-product & {
+			max-width: none;
+		}
+	}
+	&__sub-title {
+		@include adaptiveValue('font-size', 20, 16);
+		text-align: center;
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+	&__title {
+		@include adaptiveValue('font-size', 32, 20);
+		font-weight: 600;
+		line-height: 1.3;
+		letter-spacing: 0.4px;
+		text-transform: uppercase;
+		text-align: center;
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+	&__form {
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+	&__text {
+		font-size: toRem(14);
+		font-weight: 300;
+		&--center {
+			text-align: center;
+		}
+	}
+}
+
+// Product popup
+//========================================================================================================================================================
+.product-in-popup {
+	@media (min-width: $mobile) {
+		display: flex;
+		@include adaptiveValue('gap', 150, 50, 0, 1200, 992);
+	}
+	&__left {
+		max-width: toRem(278);
+		display: flex;
+		flex-direction: column;
+		@media (max-width: $tablet) {
+			max-width: toRem(200);
+		}
+		@media (max-width: $mobile) {
+			margin: 0 auto;
+			&:not(:last-child) {
+				margin-bottom: toRem(30);
+			}
+		}
+	}
+	&__slider {
+		overflow: visible !important;
+		padding-bottom: toRem(45);
+		position: relative;
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 87.410072%; /* 243/278 */
+			padding-bottom: 79.856115%; /* 222/278 */
+			filter: blur(100px);
+			transform: translate(-20%, -50%);
+			z-index: -1;
+			border-radius: 50%;
+		}
+		._blue &::before {
+			background-color: #abd7f0;
+		}
+		._green &::before {
+			background-color: #d9fe59;
+		}
+		._violet &::before {
+			background-color: $darkVioletColor;
+		}
+		._orange &::before {
+			background-color: #fd8356;
+		}
+		._red &::before {
+			background-color: #fe1f01;
+		}
+		&:not(:last-child) {
+			margin-bottom: toRem(30);
+		}
+	}
+	&__wrapper {
+	}
+	&__slide {
+		opacity: 0;
+		visibility: hidden;
+		border-radius: 150px;
+		border: 1px solid #949494;
+		overflow: hidden;
+		aspect-ratio: 278/417;
+		position: relative;
+		&.swiper-slide-active {
+			opacity: 1;
+			visibility: visible;
+		}
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__price {
+		display: inline-block;
+		padding: toRem(10) toRem(8);
+		border-radius: 15px;
+		border: 1px solid #000;
+		background: #fff;
+		color: $blackColor;
+		font-size: toRem(12);
+		font-weight: 500;
+		letter-spacing: 0.196px;
+		text-transform: uppercase;
+		align-self: center;
+	}
+	&__right {
+		@media (min-width: $mobile) {
+			max-width: toRem(445);
+		}
+	}
+	&__title {
+		@include adaptiveValue('font-size', 32, 20);
+		font-weight: 500;
+		letter-spacing: 0.4px;
+		text-transform: uppercase;
+		line-height: 1.3;
+		&:not(:last-child) {
+			margin-bottom: toRem(18);
+		}
+	}
+	&__text {
+		font-size: toRem(14);
+		font-weight: 300;
+		&:not(:last-child) {
+			margin-bottom: toRem(30);
+		}
+		p:not(:last-child) {
+			margin-bottom: toRem(15);
+		}
+	}
+	&__actions {
+		display: flex;
+		gap: toRem(16);
+		&:not(:last-child) {
+			margin-bottom: toRem(33);
+		}
+	}
+	&__quantity {
+	}
+	&__add-button {
+	}
+	&__spollers {
+		border-top: 1px solid $blackColor;
+	}
+}
+.swiper-pagination {
+	display: flex;
+	gap: toRem(8);
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+.swiper-pagination-bullet {
+	width: toRem(8);
+	height: toRem(8);
+	flex: 0 0 auto;
+	background-color: $greenColor;
+	border: 1px solid $blackColor;
+	opacity: 0.1;
+	transition: opacity 0.3s;
+	border-radius: 50%;
+	cursor: pointer;
+	&.swiper-pagination-bullet-active {
+		opacity: 1;
+		pointer-events: none;
 	}
 }

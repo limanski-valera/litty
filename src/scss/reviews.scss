@@ -1,0 +1,65 @@
+.send-review {
+	@include adaptiveValue('padding-top', 80, 40);
+	@include adaptiveValue('padding-bottom', 80, 40);
+	&__container {
+	}
+	&__title {
+		@include adaptiveValue('font-size', 42, 20, 0, 1300, 768);
+		@include adaptiveValue('margin-bottom', 90, 40);
+		display: block;
+		@media (min-width: $mobile) {
+			position: relative;
+			&::before {
+				content: '';
+				position: absolute;
+				top: 100%;
+				right: 18.916667%; /* 227/1200 */
+				width: 29.75%; /* 357/1200 */
+				padding-bottom: 2.083333%; /* 25/1200 */
+				background: url('@img/review-title-decor.svg') center center / contain no-repeat;
+			}
+		}
+	}
+	&__form {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(25);
+		position: relative;
+		max-width: toRem(600);
+		margin: 0 auto;
+		@media (max-width: $mobile) {
+			gap: toRem(15);
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			pointer-events: none;
+			background-color: #e3ef91;
+			filter: blur(100px);
+			left: 50%;
+			top: 6.6%; /* 33/500 */
+			transform: translate(-50%);
+			width: 64.833333%; /* 389/600 */
+			padding-bottom: 62.166667%; /* 373/600 */
+			z-index: -1;
+		}
+	}
+	&__input {
+	}
+	&__textarea {
+	}
+	&__button {
+		text-transform: uppercase;
+		position: relative;
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: toRem(27);
+			height: toRem(36);
+			background: url('@img/review-button-decor-star.svg') center center / contain no-repeat;
+			transform: translateY(-30%);
+		}
+	}
+}
