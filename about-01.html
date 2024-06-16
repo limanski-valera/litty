@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="uk">
 
 <head>
 	<title>Підліткам</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20240616171447">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240616193643">
 	<link rel="shortcut icon" href="favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -61,7 +61,7 @@
 								<div data-quantity class="quantity">
 									<button data-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
 									<div class="quantity__input">
-										<input data-quantity-value type="text" name="" value="1" />
+										<input data-quantity-value type="text" value="1" />
 									</div>
 									<button data-quantity-plus type="button" class="quantity__button quantity__button--plus"></button>
 								</div>
@@ -79,7 +79,7 @@
 								<div data-quantity class="quantity">
 									<button data-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
 									<div class="quantity__input">
-										<input data-quantity-value type="text" name="" value="1" />
+										<input data-quantity-value type="text" value="1" />
 									</div>
 									<button data-quantity-plus type="button" class="quantity__button quantity__button--plus"></button>
 								</div>
@@ -97,7 +97,7 @@
 								<div data-quantity class="quantity">
 									<button data-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
 									<div class="quantity__input">
-										<input data-quantity-value type="text" name="" value="1" />
+										<input data-quantity-value type="text" value="1" />
 									</div>
 									<button data-quantity-plus type="button" class="quantity__button quantity__button--plus"></button>
 								</div>
@@ -277,7 +277,82 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20240616171447"></script>
+	<div id="popup-product" aria-hidden="true" class="popup popup-product">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__body">
+					<article class="product-in-popup _blue">
+						<div class="product-in-popup__left">
+							<div class="product-in-popup__slider swiper">
+								<div class="product-in-popup__wrapper swiper-wrapper">
+									<div class="product-in-popup__slide swiper-slide">
+										<img src="img/products/product-01.webp" alt="" />
+									</div>
+									<div class="product-in-popup__slide swiper-slide">
+										<img src="img/products/product-02.webp" alt="" />
+									</div>
+									<div class="product-in-popup__slide swiper-slide">
+										<img src="img/products/product-03.webp" alt="" />
+									</div>
+								</div>
+								<div class="swiper-pagination"></div>
+							</div>
+							<span class="product-in-popup__price">465 грн</span>
+						</div>
+						<div class="product-in-popup__right">
+							<h2 class="product-in-popup__title">#Cleansing Foam</h2>
+							<div class="product-in-popup__text">
+								<p>Крутий засіб з унікальною формулою, створений для сміливості, впевненості та чистої шкіри! </p>
+								<p>
+									Якщо ви шукаєте засіб, який допоможе одночасно очистити шкіру від бруду, макіяжу, надлишку себуму та захистити шкіру від виникнення запалень (а це супер важливо!) +
+									додатково зволожити її – ви потрапили за адресою! 
+								</p>
+								<p>Ця пінка створена спеціально для підліткової шкіри!</p>
+								<p>
+									Унікальний склад сприяє відлущуванню ороговілих клітин твоєї шкіри, звуженню пор, ще й бореться з чорними точками, роблячи твою шкіру свіжою, заспокоєною, та готовою до
+									будь-яких випробувань!
+								</p>
+							</div>
+							<div class="product-in-popup__actions">
+								<div data-quantity class="product-in-popup__quantity quantity">
+									<button data-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
+									<div class="quantity__input">
+										<input data-quantity-value type="text" value="1" />
+									</div>
+									<button data-quantity-plus type="button" class="quantity__button quantity__button--plus"></button>
+								</div>
+								<button class="product-in-popup__add-button button">Додати до кошика</button>
+							</div>
+							<div data-spollers data-one-spoller class="product-in-popup__spollers simple-spollers">
+								<details class="simple-spollers__item">
+									<summary class="simple-spollers__title _icon-daw-bottom">як користуватися</summary>
+									<div class="simple-spollers__body text-block">
+										<ul>
+											<li>Крок 1: немає кращого способу почати день, ніж освіжити обличчя водою. Холодною чи теплою – вибирати тобі!</li>
+											<li>
+												Крок 2: нанеси пінку #CLEANSING FOAM на обличчя, помасажуй, приділяючи особливу увагу Т-зоні, де зазвичай виникають висипання. А ще краще, під час очищення
+												увімкни веселу музику… повір, це чудовий спосіб розпочати свій день!
+											</li>
+										</ul>
+									</div>
+								</details>
+								<details class="simple-spollers__item">
+									<summary class="simple-spollers__title _icon-daw-bottom">інгредієнти</summary>
+									<div class="simple-spollers__body">Контент спойлера</div>
+								</details>
+								<details class="simple-spollers__item">
+									<summary class="simple-spollers__title _icon-daw-bottom">Секретні формули</summary>
+									<div class="simple-spollers__body">Контент спойлера</div>
+								</details>
+							</div>
+						</div>
+					</article>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/app.min.js?_v=20240616193643"></script>
 </body>
 
 </html>

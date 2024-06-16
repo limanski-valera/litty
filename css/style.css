@@ -752,7 +752,18 @@ body::after {
   object-fit: contain
 }
 .home .special-offer {
-  margin-top: -.0625rem
+  margin-top: -.0625rem;
+  opacity: 0;
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2)
+}
+.loaded .home .special-offer {
+  transition: opacity .5s,-webkit-transform .5s;
+  transition: opacity .5s,transform .5s;
+  transition: opacity .5s,transform .5s,-webkit-transform .5s;
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1)
 }
 .link {
   transition: color .3s;
@@ -795,11 +806,41 @@ body::after {
   display: inline-block;
   transition: -webkit-transform .3s;
   transition: transform .3s;
-  transition: transform .3s,-webkit-transform .3s
+  transition: transform .3s,-webkit-transform .3s;
+  -webkit-animation: specialOfferText 2s infinite linear;
+  animation: specialOfferText 2s infinite linear
 }
 .special-offer:active .special-offer__text {
   -webkit-transform: scale(1.05);
   transform: scale(1.05)
+}
+@-webkit-keyframes specialOfferText {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1)
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2)
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1)
+  }
+}
+@keyframes specialOfferText {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1)
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2)
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1)
+  }
 }
 .text-block {
   font-weight: 300;
@@ -928,7 +969,18 @@ body::after {
   border: 1px solid #1c1c1d;
   position: relative;
   z-index: 100;
-  background-color: #f9f9f9
+  background-color: #f9f9f9;
+  opacity: 0;
+  -webkit-transform: translateY(-30px);
+  transform: translateY(-30px)
+}
+.loaded .header {
+  transition: opacity .5s,-webkit-transform .5s;
+  transition: opacity .5s,transform .5s;
+  transition: opacity .5s,transform .5s,-webkit-transform .5s;
+  opacity: 1;
+  -webkit-transform: translate(0);
+  transform: translate(0)
 }
 .header__container {
   -webkit-column-gap: 2.5rem;
@@ -1296,6 +1348,19 @@ body::after {
 .main-block__container {
   position: relative
 }
+.main-block__offer {
+  opacity: 0;
+  -webkit-transform: translateX(-30px);
+  transform: translateX(-30px)
+}
+.loaded .main-block__offer {
+  transition: opacity .5s .3s,-webkit-transform .5s .3s;
+  transition: opacity .5s .3s,transform .5s .3s;
+  transition: opacity .5s .3s,transform .5s .3s,-webkit-transform .5s .3s;
+  opacity: 1;
+  -webkit-transform: translate(0);
+  transform: translate(0)
+}
 .main-block__title {
   margin-bottom: 1.6875rem;
   text-transform: uppercase;
@@ -1383,6 +1448,11 @@ body::after {
   -webkit-filter: blur(25px);
   filter: blur(25px)
 }
+.main-block__image {
+  opacity: 0;
+  -webkit-transform: translateY(30px);
+  transform: translateY(30px)
+}
 .main-block__image img {
   max-width: 100%;
   height: auto
@@ -1417,6 +1487,27 @@ body::after {
   -webkit-transform: translate(-30%,70%);
   transform: translate(-30%,70%)
 }
+.loaded .main-block__image {
+  transition: opacity .5s .5s,-webkit-transform .5s .5s;
+  transition: opacity .5s .5s,transform .5s .5s;
+  transition: opacity .5s .5s,transform .5s .5s,-webkit-transform .5s .5s;
+  opacity: 1;
+  -webkit-transform: translate(0);
+  transform: translate(0)
+}
+.banners {
+  opacity: .5;
+  -webkit-transform: translateY(30px);
+  transform: translateY(30px)
+}
+.banners._watcher-view {
+  transition: opacity .5s,-webkit-transform .5s;
+  transition: opacity .5s,transform .5s;
+  transition: opacity .5s,transform .5s,-webkit-transform .5s;
+  opacity: 1;
+  -webkit-transform: translate(0);
+  transform: translate(0)
+}
 .banners__swiper-slide {
   padding-bottom: 33.958333%;
   position: relative;
@@ -1441,6 +1532,19 @@ body::after {
 .products__title {
   align-self: center;
   position: relative
+}
+.products__title[data-watch] {
+  opacity: 0;
+  -webkit-transform: translateX(30px);
+  transform: translateX(30px)
+}
+.products__title[data-watch]._watcher-view {
+  transition: opacity .3s,-webkit-transform .3s;
+  transition: opacity .3s,transform .3s;
+  transition: opacity .3s,transform .3s,-webkit-transform .3s;
+  opacity: 1;
+  -webkit-transform: translate(0);
+  transform: translate(0)
 }
 .products__title::after,
 .products__title::before {
@@ -1470,6 +1574,19 @@ body::after {
 .products__swiper-area {
   position: relative;
   padding: 0 6.875rem
+}
+.products__swiper-area[data-watch] {
+  opacity: 0;
+  -webkit-transform: translateY(30px);
+  transform: translateY(30px)
+}
+.products__swiper-area[data-watch]._watcher-view {
+  transition: opacity .3s,-webkit-transform .3s;
+  transition: opacity .3s,transform .3s;
+  transition: opacity .3s,transform .3s,-webkit-transform .3s;
+  opacity: 1;
+  -webkit-transform: translate(0);
+  transform: translate(0)
 }
 .products__buttons {
   position: absolute;
@@ -1535,7 +1652,18 @@ body::after {
   opacity: .5
 }
 .home-info {
-  background: url(../img/home/info-bg.svg) center center/cover no-repeat
+  background: url(../img/home/info-bg.svg) center center/cover no-repeat;
+  opacity: 0;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1)
+}
+.home-info._watcher-view {
+  transition: opacity .3s,-webkit-transform .3s;
+  transition: opacity .3s,transform .3s;
+  transition: opacity .3s,transform .3s,-webkit-transform .3s;
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1)
 }
 .home-info__content {
   max-width: 61.625rem;
@@ -1544,7 +1672,18 @@ body::after {
   text-align: center;
   border-radius: 30px;
   background: #fff;
-  box-shadow: 15px 24px 14.8px 0 rgba(0,0,0,.25)
+  box-shadow: 15px 24px 14.8px 0 rgba(0,0,0,.25);
+  opacity: 0;
+  -webkit-transform: translateY(30px);
+  transform: translateY(30px)
+}
+._watcher-view .home-info__content {
+  transition: opacity .3s .3s,-webkit-transform .3s .3s;
+  transition: opacity .3s .3s,transform .3s .3s;
+  transition: opacity .3s .3s,transform .3s .3s,-webkit-transform .3s .3s;
+  opacity: 1;
+  -webkit-transform: translate(0);
+  transform: translate(0)
 }
 .home-info__title {
   font-weight: 700;
@@ -2978,6 +3117,10 @@ body::after {
   }
   .popup-product .popup__content {
     padding: 3.125rem 1.25rem
+  }
+  .popup__close {
+    top: .625rem;
+    right: .625rem
   }
   .product-in-popup__left {
     margin: 0 auto
