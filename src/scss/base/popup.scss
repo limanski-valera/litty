@@ -197,6 +197,7 @@ body::after {
 		overflow: hidden;
 		aspect-ratio: 278/417;
 		position: relative;
+		min-height: toRem(298);
 		&.swiper-slide-active {
 			opacity: 1;
 			visibility: visible;
