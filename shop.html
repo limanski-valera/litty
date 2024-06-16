@@ -5,10 +5,8 @@
 	<title>Shop</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240616142538">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240616150623">
 	<link rel="shortcut icon" href="favicon.ico">
-	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -24,7 +22,7 @@
 								<a href="shop.html" class="menu__link link"><span class="menu__text">придбати</span><span class="menu__text--active">придбати</span></a>
 							</li>
 							<li class="menu__item">
-								<a href="about.html" class="menu__link link"><span class="menu__text">дізнатися</span><span class="menu__text--active">дізнатися</span></a>
+								<a href="about-01.html" class="menu__link link"><span class="menu__text">дізнатися</span><span class="menu__text--active">дізнатися</span></a>
 							</li>
 							<li class="menu__item">
 								<a href="reviews.html" class="menu__link link"><span class="menu__text">відгуки</span><span class="menu__text--active">відгуки</span></a>
@@ -34,7 +32,7 @@
 				</div>
 				<a href="home.html" class="header__logo"><img src="img/logo.svg" alt="" /></a>
 				<div class="header__active">
-					<a href="#" class="header__call link">зв'язатися</a>
+					<a href="contacts.html" class="header__call link">зв'язатися</a>
 					<button class="header__cart-btn _icon-cart"></button>
 				</div>
 			</div>
@@ -131,12 +129,6 @@
 						<a href="#" class="cart__button button">Перейти до сплати</a>
 						<a href="#" class="cart__button button button--white">Продовжити покупки</a>
 					</div>
-					<select class="custom-select">
-						<option value="1" selected>Пункт №1</option>
-						<option value="2">Пункт №2</option>
-						<option value="3">Пункт №3</option>
-						<option value="4">Пункт №4</option>
-					</select>
 				</div>
 			</div>
 		</div>
@@ -153,7 +145,7 @@
 					<img src="img/shop/shop-main.webp" alt="" />
 				</div>
 			</section>
-			<a href="#" class="special-offer"><span class="special-offer__text">отримай -10% на перше замовлення</span></a>
+			<a href="#" data-popup="#popup" class="special-offer"><span class="special-offer__text">отримай -10% на перше замовлення</span></a>
 			<section class="products">
 				<div class="products__container">
 					<div class="products__header">
@@ -172,12 +164,12 @@
 								<div class="products__swiper-slide swiper-slide">
 									<div class="products__card card _blue">
 										<img src="img/products/new.svg" alt="" class="card__special" />
-										<a href="#" class="card__image">
+										<a href="#" data-popup="#popup-product" class="card__image">
 											<img src="img/products/product-01.webp" alt="" />
 										</a>
 										<div class="card__body">
 											<h3 class="card__title">
-												<a href="#" class="card__title-link">#Сleansing foam</a>
+												<a href="#" data-popup="#popup-product" class="card__title-link">#Сleansing foam</a>
 											</h3>
 											<div class="card__text">Засіб для очищення - допоможе одночасно очистити шкіру від бруду, макіяжу...</div>
 											<div class="card__info">
@@ -189,12 +181,12 @@
 								</div>
 								<div class="products__swiper-slide swiper-slide">
 									<div class="products__card card _green">
-										<a href="#" class="card__image">
+										<a href="#" data-popup="#popup-product" class="card__image">
 											<img src="img/products/product-02.webp" alt="" />
 										</a>
 										<div class="card__body">
 											<h3 class="card__title">
-												<a href="#" class="card__title-link">#Refreshing tonic&mist</a>
+												<a href="#" data-popup="#popup-product" class="card__title-link">#Refreshing tonic&mist</a>
 											</h3>
 											<div class="card__text">Пожвавлюючий міст для обличчя, тонік, і спрей для фіксації макіяжу в одному!</div>
 											<div class="card__info">
@@ -207,12 +199,12 @@
 								<div class="products__swiper-slide swiper-slide">
 									<div class="products__card card _violet">
 										<img src="img/products/tik-tok.svg" alt="" class="card__special" />
-										<a href="#" class="card__image">
+										<a href="#" data-popup="#popup-product" class="card__image">
 											<img src="img/products/product-03.webp" alt="" />
 										</a>
 										<div class="card__body">
 											<h3 class="card__title">
-												<a href="#" class="card__title-link">#Moisturizing cream-gel</a>
+												<a href="#" data-popup="#popup-product" class="card__title-link">#Moisturizing cream-gel</a>
 											</h3>
 											<div class="card__text">Засіб, який інтенсивно зволожує, живить, та захищає шкіру...</div>
 											<div class="card__info">
@@ -224,12 +216,12 @@
 								</div>
 								<div class="products__swiper-slide swiper-slide">
 									<div class="products__card card _orange">
-										<a href="#" class="card__image">
+										<a href="#" data-popup="#popup-product" class="card__image">
 											<img src="img/products/product-04.webp" alt="" />
 										</a>
 										<div class="card__body">
 											<h3 class="card__title">
-												<a href="#" class="card__title-link">#Cream-gel with AНA acids</a>
+												<a href="#" data-popup="#popup-product" class="card__title-link">#Cream-gel with AНA acids</a>
 											</h3>
 											<div class="card__text">крем-гель для щоденного використання, зупиняє прищі ще до їхньої появи!</div>
 											<div class="card__info">
@@ -241,12 +233,12 @@
 								</div>
 								<div class="products__swiper-slide swiper-slide">
 									<div class="products__card card _red">
-										<a href="#" class="card__image">
+										<a href="#" data-popup="#popup-product" class="card__image">
 											<img src="img/products/product-05.webp" alt="" />
 										</a>
 										<div class="card__body">
 											<h3 class="card__title">
-												<a href="#" class="card__title-link">#SOS cream-раste</a>
+												<a href="#" data-popup="#popup-product" class="card__title-link">#SOS cream-раste</a>
 											</h3>
 											<div class="card__text">швидкодіюча паста, створена для вирішення проблем з вугровими висипами</div>
 											<div class="card__info">
@@ -278,12 +270,12 @@
 								<div class="products__swiper-slide swiper-slide">
 									<div class="products__card card _violet">
 										<img src="img/products/besteller.svg" alt="" class="card__special" />
-										<a href="#" class="card__image">
+										<a href="#" data-popup="#popup-product" class="card__image">
 											<img src="img/products/be.webp" alt="" />
 										</a>
 										<div class="card__body">
 											<h3 class="card__title">
-												<a href="#" class="card__title-link">#BE Litty</a>
+												<a href="#" data-popup="#popup-product" class="card__title-link">#BE Litty</a>
 											</h3>
 											<div class="card__text">Очищення + тонус + зволоження + лікування</div>
 											<div class="card__info">
@@ -295,12 +287,12 @@
 								</div>
 								<div class="products__swiper-slide swiper-slide">
 									<div class="products__card card _green">
-										<a href="#" class="card__image">
+										<a href="#" data-popup="#popup-product" class="card__image">
 											<img src="img/products/best.webp" alt="" />
 										</a>
 										<div class="card__body">
 											<h3 class="card__title">
-												<a href="#" class="card__title-link">#mini Litty</a>
+												<a href="#" data-popup="#popup-product" class="card__title-link">#mini Litty</a>
 											</h3>
 											<div class="card__text">Найбільш продавані продукти LITTY першої необхідності</div>
 											<div class="card__info">
@@ -331,12 +323,12 @@
 							<div class="products__swiper-wrapper swiper-wrapper">
 								<div class="products__swiper-slide swiper-slide">
 									<div class="products__card card _green">
-										<a href="#" class="card__image">
+										<a href="#" data-popup="#popup-product" class="card__image">
 											<img src="img/products/gft.webp" alt="" />
 										</a>
 										<div class="card__body">
 											<h3 class="card__title">
-												<a href="#" class="card__title-link">Подарункова упаковка</a>
+												<a href="#" data-popup="#popup-product" class="card__title-link">Подарункова упаковка</a>
 											</h3>
 											<div class="card__text">Додайте стильну подарункову упаковку!</div>
 											<div class="card__info">
@@ -366,35 +358,53 @@
 					<nav class="footer__menu">
 						<ul class="footer__menu-list">
 							<li class="footer__menu-item">
-								<a href="#" class="footer__menu-link">придбати</a>
+								<a href="shop.html" class="footer__menu-link">придбати</a>
 							</li>
 							<li class="footer__menu-item">
-								<a href="#" class="footer__menu-link">дізнатися</a>
+								<a href="about-01.html" class="footer__menu-link">дізнатися</a>
 							</li>
 							<li class="footer__menu-item">
-								<a href="#" class="footer__menu-link">відгуки</a>
+								<a href="reviews.html" class="footer__menu-link">відгуки</a>
 							</li>
 							<li class="footer__menu-item">
-								<a href="#" class="footer__menu-link">зв'язатися</a>
+								<a href="contacts.html" class="footer__menu-link">зв'язатися</a>
 							</li>
 						</ul>
 					</nav>
 					<div class="footer__main">
-						<a href="#" class="footer__logo">
+						<a href="home.html" class="footer__logo">
 							<img src="img/logo-white.svg" alt="">
 						</a>
 						<span class="footer__logo-description">© 2024, Litty cosmetics</span>
 					</div>
 					<div class="footer__social social">
-						<a href="#" class="social__link _icon-s-insta"></a>
-						<a href="#" class="social__link _icon-s-tiktok"></a>
-						<a href="#" class="social__link _icon-s-facebook"></a>
+						<a href="https://www.instagram.com/litty.cosmetics" target="_blank" class="social__link _icon-s-insta"></a>
+						<a href="#" target="_blank" class="social__link _icon-s-tiktok"></a>
+						<a href="#" target="_blank" class="social__link _icon-s-facebook"></a>
 					</div>
 				</div>
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20240616142538"></script>
+	<div id="popup" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close _icon-close"></button>
+				<div class="popup__body">
+					<h2 class="popup__sub-title">Ласкаво просимо у Litty!</h2>
+					<h3 class="popup__title">отримайте -10%
+						від вашої першої покупки</h3>
+					<form action="#" class="popup__form mail-form">
+						<input type="email" name="email" class="mail-form__input input" placeholder="ваш Email">
+						<button type="submit" class="mail-form__button button">відправити</button>
+					</form>
+					<div class="popup__text popup__text--center">Все починається з тебе!</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/app.min.js?_v=20240616150623"></script>
 </body>
 
 </html>

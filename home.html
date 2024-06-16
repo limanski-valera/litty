@@ -5,10 +5,8 @@
 	<title>HomePage</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240616142538">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240616150623">
 	<link rel="shortcut icon" href="favicon.ico">
-	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -24,7 +22,7 @@
 								<a href="shop.html" class="menu__link link"><span class="menu__text">придбати</span><span class="menu__text--active">придбати</span></a>
 							</li>
 							<li class="menu__item">
-								<a href="about.html" class="menu__link link"><span class="menu__text">дізнатися</span><span class="menu__text--active">дізнатися</span></a>
+								<a href="about-01.html" class="menu__link link"><span class="menu__text">дізнатися</span><span class="menu__text--active">дізнатися</span></a>
 							</li>
 							<li class="menu__item">
 								<a href="reviews.html" class="menu__link link"><span class="menu__text">відгуки</span><span class="menu__text--active">відгуки</span></a>
@@ -34,7 +32,7 @@
 				</div>
 				<a href="home.html" class="header__logo"><img src="img/logo.svg" alt="" /></a>
 				<div class="header__active">
-					<a href="#" class="header__call link">зв'язатися</a>
+					<a href="contacts.html" class="header__call link">зв'язатися</a>
 					<button class="header__cart-btn _icon-cart"></button>
 				</div>
 			</div>
@@ -130,12 +128,6 @@
 						<a href="#" class="cart__button button">Перейти до сплати</a>
 						<a href="#" class="cart__button button button--white">Продовжити покупки</a>
 					</div>
-					<select class="custom-select">
-						<option value="1" selected>Пункт №1</option>
-						<option value="2">Пункт №2</option>
-						<option value="3">Пункт №3</option>
-						<option value="4">Пункт №4</option>
-					</select>
 				</div>
 			</div>
 		</div>
@@ -203,7 +195,7 @@
 										</a>
 										<div class="card__body">
 											<h3 class="card__title">
-												<a href="#" class="card__title-link">#Сleansing foam</a>
+												<a href="#" data-popup="#popup-product" class="card__title-link">#Сleansing foam</a>
 											</h3>
 											<div class="card__text">Засіб для очищення - допоможе одночасно очистити шкіру від бруду, макіяжу...</div>
 											<div class="card__info">
@@ -215,12 +207,12 @@
 								</div>
 								<div class="products__swiper-slide swiper-slide">
 									<div class="products__card card _green">
-										<a href="#" class="card__image">
+										<a href="#" data-popup="#popup-product" class="card__image">
 											<img src="img/products/product-02.webp" alt="" />
 										</a>
 										<div class="card__body">
 											<h3 class="card__title">
-												<a href="#" class="card__title-link">#Refreshing tonic&mist</a>
+												<a href="#" data-popup="#popup-product" class="card__title-link">#Refreshing tonic&mist</a>
 											</h3>
 											<div class="card__text">Пожвавлюючий міст для обличчя, тонік, і спрей для фіксації макіяжу в одному!</div>
 											<div class="card__info">
@@ -232,12 +224,12 @@
 								</div>
 								<div class="products__swiper-slide swiper-slide">
 									<div class="products__card card _violet">
-										<a href="#" class="card__image">
+										<a href="#" data-popup="#popup-product" class="card__image">
 											<img src="img/products/product-03.webp" alt="" />
 										</a>
 										<div class="card__body">
 											<h3 class="card__title">
-												<a href="#" class="card__title-link">#Moisturizing cream-gel</a>
+												<a href="#" data-popup="#popup-product" class="card__title-link">#Moisturizing cream-gel</a>
 											</h3>
 											<div class="card__text">Засіб, який інтенсивно зволожує, живить, та захищає шкіру...</div>
 											<div class="card__info">
@@ -249,12 +241,12 @@
 								</div>
 								<div class="products__swiper-slide swiper-slide">
 									<div class="products__card card _orange">
-										<a href="#" class="card__image">
+										<a href="#" data-popup="#popup-product" class="card__image">
 											<img src="img/products/product-04.webp" alt="" />
 										</a>
 										<div class="card__body">
 											<h3 class="card__title">
-												<a href="#" class="card__title-link">#Cream-gel with AНA acids</a>
+												<a href="#" data-popup="#popup-product" class="card__title-link">#Cream-gel with AНA acids</a>
 											</h3>
 											<div class="card__text">крем-гель для щоденного використання, зупиняє прищі ще до їхньої появи!</div>
 											<div class="card__info">
@@ -266,12 +258,12 @@
 								</div>
 								<div class="products__swiper-slide swiper-slide">
 									<div class="products__card card _red">
-										<a href="#" class="card__image">
+										<a href="#" data-popup="#popup-product" class="card__image">
 											<img src="img/products/product-05.webp" alt="" />
 										</a>
 										<div class="card__body">
 											<h3 class="card__title">
-												<a href="#" class="card__title-link">#SOS cream-раste</a>
+												<a href="#" data-popup="#popup-product" class="card__title-link">#SOS cream-раste</a>
 											</h3>
 											<div class="card__text">швидкодіюча паста, створена для вирішення проблем з вугровими висипами</div>
 											<div class="card__info">
@@ -391,11 +383,11 @@
 				<div class="instagram__container">
 					<div class="instagram__header">
 						<div class="instagram__account account-instagram">
-							<a href="#" class="account-instagram__avatar">
+							<a href="https://www.instagram.com/litty.cosmetics" target="_blank" class="account-instagram__avatar">
 								<img src="img/" alt="" />
 							</a>
 							<div class="account-instagram__info">
-								<h2 class="account-instagram__title"><a class="account-instagram__title--link" href="">Доглядова косметика для підлітків 🛒</a></h2>
+								<h2 class="account-instagram__title"><a class="account-instagram__title--link" href="https://www.instagram.com/litty.cosmetics" target="_blank">Доглядова косметика для підлітків 🛒</a></h2>
 								<div class="account-instagram__description">@litty.cosmetics</div>
 							</div>
 						</div>
@@ -413,7 +405,7 @@
 								<div class="info-instagram__label">following</div>
 							</div>
 						</div>
-						<a href="#" class="instagram__subscribe">Follow</a>
+						<a href="https://www.instagram.com/litty.cosmetics" target="_blank" class="instagram__subscribe">Follow</a>
 					</div>
 					<div class="instagram__description">
 						<p>🖇️Втілюємо енергію та стиль молоді, пропонуючи інноваційні продукти для догляду за шкірою 12+</p>
@@ -456,29 +448,29 @@
 					<nav class="footer__menu">
 						<ul class="footer__menu-list">
 							<li class="footer__menu-item">
-								<a href="#" class="footer__menu-link">придбати</a>
+								<a href="shop.html" class="footer__menu-link">придбати</a>
 							</li>
 							<li class="footer__menu-item">
-								<a href="#" class="footer__menu-link">дізнатися</a>
+								<a href="about-01.html" class="footer__menu-link">дізнатися</a>
 							</li>
 							<li class="footer__menu-item">
-								<a href="#" class="footer__menu-link">відгуки</a>
+								<a href="reviews.html" class="footer__menu-link">відгуки</a>
 							</li>
 							<li class="footer__menu-item">
-								<a href="#" class="footer__menu-link">зв'язатися</a>
+								<a href="contacts.html" class="footer__menu-link">зв'язатися</a>
 							</li>
 						</ul>
 					</nav>
 					<div class="footer__main">
-						<a href="#" class="footer__logo">
+						<a href="home.html" class="footer__logo">
 							<img src="img/logo-white.svg" alt="">
 						</a>
 						<span class="footer__logo-description">© 2024, Litty cosmetics</span>
 					</div>
 					<div class="footer__social social">
-						<a href="#" class="social__link _icon-s-insta"></a>
-						<a href="#" class="social__link _icon-s-tiktok"></a>
-						<a href="#" class="social__link _icon-s-facebook"></a>
+						<a href="https://www.instagram.com/litty.cosmetics" target="_blank" class="social__link _icon-s-insta"></a>
+						<a href="#" target="_blank" class="social__link _icon-s-tiktok"></a>
+						<a href="#" target="_blank" class="social__link _icon-s-facebook"></a>
 					</div>
 				</div>
 			</div>
@@ -575,7 +567,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240616142538"></script>
+	<script src="js/app.min.js?_v=20240616150623"></script>
 </body>
 
 </html>
