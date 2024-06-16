@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240615162156">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240616142538">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,9 +39,109 @@
 				</div>
 			</div>
 		</header>
+		<div class="cart">
+			<div class="cart__body">
+				<div class="cart__head">
+					<h3 class="cart__title">кошик<span class="cart__title-count">(3)</span></h3>
+					<button class="cart__close-btn _icon-close"></button>
+				</div>
+				<!-- <div class="cart__placeholder">
+            Ваш кошик порожній...
+        </div> -->
+				<div class="cart__content">
+					<ul class="cart__products">
+						<li class="cart__product product-in-cart">
+							<a href="#" class="product-in-cart__image">
+								<img src="img/products/product-01.webp" alt="" />
+							</a>
+							<div class="product-in-cart__content">
+								<h3 class="product-in-cart__title">
+									<a href="#" class="product-in-cart__link">#Cleansing Foam</a>
+								</h3>
+								<span class="product-in-cart__sum">465 грн</span>
+								<div data-quantity class="quantity">
+									<button data-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
+									<div class="quantity__input">
+										<input data-quantity-value type="text" name="" value="1" />
+									</div>
+									<button data-quantity-plus type="button" class="quantity__button quantity__button--plus"></button>
+								</div>
+							</div>
+						</li>
+						<li class="cart__product product-in-cart">
+							<a href="#" class="product-in-cart__image">
+								<img src="img/products/best.webp" alt="" />
+							</a>
+							<div class="product-in-cart__content">
+								<h3 class="product-in-cart__title">
+									<a href="#" class="product-in-cart__link">кастомний догляд</a>
+								</h3>
+								<span class="product-in-cart__sum">1309.05 грн</span>
+								<div data-quantity class="quantity">
+									<button data-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
+									<div class="quantity__input">
+										<input data-quantity-value type="text" name="" value="1" />
+									</div>
+									<button data-quantity-plus type="button" class="quantity__button quantity__button--plus"></button>
+								</div>
+							</div>
+						</li>
+						<li class="cart__product product-in-cart">
+							<a href="#" class="product-in-cart__image">
+								<img src="img/products/gft.webp" alt="" />
+							</a>
+							<div class="product-in-cart__content">
+								<h3 class="product-in-cart__title">
+									<a href="#" class="product-in-cart__link">подарунковий пакет</a>
+								</h3>
+								<span class="product-in-cart__sum">50 грн</span>
+								<div data-quantity class="quantity">
+									<button data-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
+									<div class="quantity__input">
+										<input data-quantity-value type="text" name="" value="1" />
+									</div>
+									<button data-quantity-plus type="button" class="quantity__button quantity__button--plus"></button>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<form action="#" class="cart__promotion-form">
+						<input type="text" placeholder="Знижка" class="cart__promotion-form-input input" />
+						<button class="cart__promotion-form-button button" type="submit">Використовувати</button>
+					</form>
+					<div class="cart__gft-box">
+						<button class="cart__gft-box-button button button--white">Додаткові подарункові упаковки</button>
+					</div>
+					<div class="cart__info info-cart">
+						<div class="info-cart__item">
+							<span class="info-cart__label">Знижка:</span>
+							<span class="info-cart__value">0 грн</span>
+						</div>
+						<div class="info-cart__item">
+							<span class="info-cart__label">Доставка:</span>
+							<span class="info-cart__value">від 1000 грн - безкоштовна</span>
+						</div>
+						<div class="info-cart__item">
+							<span class="info-cart__label">До сплати:</span>
+							<span class="info-cart__value">1824.05 грн</span>
+						</div>
+					</div>
+					<div class="cart__footer">
+						<a href="#" class="cart__button button">Перейти до сплати</a>
+						<a href="#" class="cart__button button button--white">Продовжити покупки</a>
+					</div>
+					<select class="custom-select">
+						<option value="1" selected>Пункт №1</option>
+						<option value="2">Пункт №2</option>
+						<option value="3">Пункт №3</option>
+						<option value="4">Пункт №4</option>
+					</select>
+				</div>
+			</div>
+		</div>
 
 		<main class="page home">
-			<a href="#" class="special-offer"><span class="special-offer__text">отримай -10% на перше замовлення</span></a>
+			<a href="#" data-popup="#popup" class="special-offer"><span class="special-offer__text">отримай -10% на перше замовлення</span></a>
 			<section class="main-block">
 				<div class="main-block__container">
 					<div class="main-block__offer">
@@ -67,15 +167,12 @@
 						<div class="banners__swiper-slide swiper-slide">
 							<img src="img/banners/banner-01.webp" alt="banner" />
 						</div>
-
 						<div class="banners__swiper-slide swiper-slide">
 							<img src="img/banners/banner-02.webp" alt="banner" />
 						</div>
-
 						<div class="banners__swiper-slide swiper-slide">
 							<img src="img/banners/banner-03.webp" alt="banner" />
 						</div>
-
 						<div class="banners__swiper-slide swiper-slide">
 							<img src="img/banners/banner-04.webp" alt="banner" />
 						</div>
@@ -100,8 +197,8 @@
 							<div class="products__swiper-wrapper swiper-wrapper">
 								<div class="products__swiper-slide swiper-slide">
 									<div class="products__card card _blue">
-										<img src="img/products/new.svg" alt="" class="card__special">
-										<a href="#" class="card__image">
+										<img src="img/products/new.svg" alt="" class="card__special" />
+										<a href="#" data-popup="#popup-product" class="card__image">
 											<img src="img/products/product-01.webp" alt="" />
 										</a>
 										<div class="card__body">
@@ -295,7 +392,7 @@
 					<div class="instagram__header">
 						<div class="instagram__account account-instagram">
 							<a href="#" class="account-instagram__avatar">
-								<img src="img/" alt="">
+								<img src="img/" alt="" />
 							</a>
 							<div class="account-instagram__info">
 								<h2 class="account-instagram__title"><a class="account-instagram__title--link" href="">Доглядова косметика для підлітків 🛒</a></h2>
@@ -324,22 +421,22 @@
 					</div>
 					<div class="instagram__images">
 						<div class="instagram__image">
-							<img src="img/" alt="">
+							<img src="img/" alt="" />
 						</div>
 						<div class="instagram__image">
-							<img src="img/" alt="">
+							<img src="img/" alt="" />
 						</div>
 						<div class="instagram__image">
-							<img src="img/" alt="">
+							<img src="img/" alt="" />
 						</div>
 						<div class="instagram__image">
-							<img src="img/" alt="">
+							<img src="img/" alt="" />
 						</div>
 						<div class="instagram__image">
-							<img src="img/" alt="">
+							<img src="img/" alt="" />
 						</div>
 						<div class="instagram__image">
-							<img src="img/" alt="">
+							<img src="img/" alt="" />
 						</div>
 					</div>
 				</div>
@@ -387,7 +484,98 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20240615162156"></script>
+	<div id="popup" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close _icon-close"></button>
+				<div class="popup__body">
+					<h2 class="popup__sub-title">Ласкаво просимо у Litty!</h2>
+					<h3 class="popup__title">отримайте -10%
+						від вашої першої покупки</h3>
+					<form action="#" class="popup__form mail-form">
+						<input type="email" name="email" class="mail-form__input input" placeholder="ваш Email">
+						<button type="submit" class="mail-form__button button">відправити</button>
+					</form>
+					<div class="popup__text popup__text--center">Все починається з тебе!</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="popup-product" aria-hidden="true" class="popup popup-product">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__body">
+					<article class="product-in-popup _blue">
+						<div class="product-in-popup__left">
+							<div class="product-in-popup__slider swiper">
+								<div class="product-in-popup__wrapper swiper-wrapper">
+									<div class="product-in-popup__slide swiper-slide">
+										<img src="img/products/product-01.webp" alt="" />
+									</div>
+									<div class="product-in-popup__slide swiper-slide">
+										<img src="img/products/product-02.webp" alt="" />
+									</div>
+									<div class="product-in-popup__slide swiper-slide">
+										<img src="img/products/product-03.webp" alt="" />
+									</div>
+								</div>
+								<div class="swiper-pagination"></div>
+							</div>
+							<span class="product-in-popup__price">465 грн</span>
+						</div>
+						<div class="product-in-popup__right">
+							<h2 class="product-in-popup__title">#Cleansing Foam</h2>
+							<div class="product-in-popup__text">
+								<p>Крутий засіб з унікальною формулою, створений для сміливості, впевненості та чистої шкіри! </p>
+								<p>
+									Якщо ви шукаєте засіб, який допоможе одночасно очистити шкіру від бруду, макіяжу, надлишку себуму та захистити шкіру від виникнення запалень (а це супер важливо!) +
+									додатково зволожити її – ви потрапили за адресою! 
+								</p>
+								<p>Ця пінка створена спеціально для підліткової шкіри!</p>
+								<p>
+									Унікальний склад сприяє відлущуванню ороговілих клітин твоєї шкіри, звуженню пор, ще й бореться з чорними точками, роблячи твою шкіру свіжою, заспокоєною, та готовою до
+									будь-яких випробувань!
+								</p>
+							</div>
+							<div class="product-in-popup__actions">
+								<div data-quantity class="product-in-popup__quantity quantity">
+									<button data-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
+									<div class="quantity__input">
+										<input data-quantity-value type="text" name="" value="1" />
+									</div>
+									<button data-quantity-plus type="button" class="quantity__button quantity__button--plus"></button>
+								</div>
+								<button class="product-in-popup__add-button button">Додати до кошика</button>
+							</div>
+							<div data-spollers data-one-spoller class="product-in-popup__spollers simple-spollers">
+								<details class="simple-spollers__item">
+									<summary class="simple-spollers__title _icon-daw-bottom">як користуватися</summary>
+									<div class="simple-spollers__body text-block">
+										<ul>
+											<li>Крок 1: немає кращого способу почати день, ніж освіжити обличчя водою. Холодною чи теплою – вибирати тобі!</li>
+											<li>
+												Крок 2: нанеси пінку #CLEANSING FOAM на обличчя, помасажуй, приділяючи особливу увагу Т-зоні, де зазвичай виникають висипання. А ще краще, під час очищення
+												увімкни веселу музику… повір, це чудовий спосіб розпочати свій день!
+											</li>
+										</ul>
+									</div>
+								</details>
+								<details class="simple-spollers__item">
+									<summary class="simple-spollers__title _icon-daw-bottom">інгредієнти</summary>
+									<div class="simple-spollers__body">Контент спойлера</div>
+								</details>
+								<details class="simple-spollers__item">
+									<summary class="simple-spollers__title _icon-daw-bottom">Секретні формули</summary>
+									<div class="simple-spollers__body">Контент спойлера</div>
+								</details>
+							</div>
+						</div>
+					</article>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20240616142538"></script>
 </body>
 
 </html>
