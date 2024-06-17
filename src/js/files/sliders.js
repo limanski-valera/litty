@@ -95,6 +95,50 @@ function initSliders() {
 			});
 		});
 	}
+
+	if (document.querySelector('.products__swiper-area--home')) {
+		const slider = document.querySelector('.products__swiper-area--home');
+		const buttonPrev = slider.querySelector('.swiper-button-prev');
+		const buttonNext = slider.querySelector('.swiper-button-next');
+
+		new Swiper(slider.querySelector('.products__swiper'), {
+			// Вказуємо склас потрібного слайдера
+			// Підключаємо модулі слайдера
+			// для конкретного випадку
+			modules: [Navigation],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 3,
+			spaceBetween: 30,
+			centeredSlides: true,
+			speed: 800,
+			loop: true,
+			lazy: true,
+
+			navigation: {
+				prevEl: buttonPrev,
+				nextEl: buttonNext,
+			},
+			breakpoints: {
+				0: {
+					slidesPerView: 1,
+					centeredSlides: false,
+				},
+				600: {
+					slidesPerView: 2,
+					centeredSlides: false,
+				},
+				992: {
+					spaceBetween: 15,
+					slidesPerView: 3,
+					centeredSlides: true,
+				},
+				1100: {
+					spaceBetween: 30,
+				},
+			},
+		});
+	}
 	if (document.querySelector('.reviews__swiper')) {
 		new Swiper('.reviews__swiper', {
 			// Вказуємо склас потрібного слайдера
@@ -146,7 +190,7 @@ function initSliders() {
 				pagination: {
 					el: slide.querySelector('.swiper-pagination'),
 					type: 'bullets',
-					clickable: true
+					clickable: true,
 				},
 			});
 		});

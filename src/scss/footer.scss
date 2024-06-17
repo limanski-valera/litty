@@ -67,10 +67,14 @@
 		}
 	}
 	&__content {
-		display: flex;
-		justify-content: space-between;
 		gap: toRem(40);
+		@media (min-width: $mobile) {
+			display: grid;
+			grid-template-columns: toRem(250) auto toRem(250);
+			justify-content: space-between;
+		}
 		@media (max-width: $mobile) {
+			display: flex;
 			flex-direction: column;
 			align-items: center;
 			text-align: center;
@@ -130,51 +134,12 @@
 	&__social {
 	}
 }
-.mail-form {
-	display: flex;
-	gap: toRem(22);
-	max-width: toRem(670);
-    @media (max-width:$mobile){
-        gap: toRem(10);
-    }
-    @media (max-width:$mobileSmall){
-        flex-direction: column;
-    }
-	&__input {
-		@media (max-width:$mobileSmall){
-			text-align: center;
-		}
-	}
-	&__button {
-		font-size: toRem(17);
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		border-radius: 30px;
-		border-width: 1px;
-		position: relative;
-		z-index: 2;
-		&::after {
-			content: '';
-			width: toRem(67);
-			height: toRem(63);
-			position: absolute;
-			left: 100%;
-			background-color: $whiteColor;
-			filter: blur(25px);
-			z-index: -1;
-			transform: translateX(-50%);
-			pointer-events: none;
-		}
-	}
-}
-.button {
-}
 .social {
-	display: flex;
 	gap: toRem(20);
+	display: flex;
 	@media (min-width: $mobile) {
 		flex-direction: column;
+		align-items: flex-end;
 	}
 	&__link {
 		position: relative;

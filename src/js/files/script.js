@@ -94,7 +94,31 @@ function initCustomSelect(container) {
 	});
 }
 
+function initSpecialPopupShow() {
+	const block = document.querySelector('.products');
+	const popup = document.querySelector('#popup');
+
+	function openPopup() {
+		flsModules.popup.open('#popup');
+
+		document.removeEventListener('scroll', scrollHandler);
+	}
+
+	function scrollHandler(e) {
+		const blockPositionY = block.getBoundingClientRect().top;
+
+		if (blockPositionY - 200 < 0) {
+			openPopup();
+		}
+	}
+
+	if (block && popup) {
+		document.addEventListener('scroll', scrollHandler);
+	}
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 	initCart();
 	initCustomSelect('');
+	initSpecialPopupShow();
 });

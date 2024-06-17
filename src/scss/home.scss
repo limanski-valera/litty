@@ -297,7 +297,8 @@
 			}
 		}
 	}
-	&__swiper-area {
+	&__swiper-area,
+	&__swiper-area--home {
 		position: relative;
 		padding: 0 toRem(110);
 		@media (max-width: $pc) {
@@ -360,6 +361,24 @@
 			&.swiper-slide-next {
 				visibility: visible;
 				opacity: 1;
+			}
+		}
+		.products__swiper-area--home & {
+			@media (min-width: $tablet) {
+				&.swiper-slide-next + .swiper-slide {
+					visibility: hidden;
+					opacity: 0;
+				}
+				&.swiper-slide-prev {
+					visibility: visible;
+					opacity: 1;
+				}
+			}
+			@media (min-width: toRem(600)) {
+				&.swiper-slide-next {
+					visibility: visible;
+					opacity: 1;
+				}
 			}
 		}
 	}

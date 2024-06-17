@@ -7,17 +7,18 @@
 		@include adaptiveValue('font-size', 42, 20, 0, 1300, 768);
 		@include adaptiveValue('margin-bottom', 90, 40);
 		display: block;
-		@media (min-width: $mobile) {
-			position: relative;
-			&::before {
-				content: '';
-				position: absolute;
-				top: 100%;
-				right: 18.916667%; /* 227/1200 */
-				width: 29.75%; /* 357/1200 */
-				padding-bottom: 2.083333%; /* 25/1200 */
-				background: url('@img/review-title-decor.svg') center center / contain no-repeat;
-			}
+	}
+	&__title-decorator {
+		position: relative;
+		display: inline-block;
+		&::before {
+			content: '';
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
+			padding-bottom: 7.002801%; /* 25/357 */
+			background: url('@img/review-title-decor.svg') center center / contain no-repeat;
 		}
 	}
 	&__form {

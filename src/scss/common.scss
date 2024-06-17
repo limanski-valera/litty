@@ -64,6 +64,49 @@
 .disabled {
 	pointer-events: none;
 }
+.mail-form {
+	display: flex;
+	gap: toRem(22);
+	max-width: toRem(670);
+    @media (max-width:$mobile){
+        gap: toRem(10);
+    }
+    @media (max-width:$mobileSmall){
+        flex-direction: column;
+    }
+	&__input {
+		@media (max-width:$mobileSmall){
+			text-align: center;
+		}
+	}
+	&__button-wrapper {
+		position: relative;
+		display: inline-block;
+		&::after {
+			content: '';
+			width: toRem(67);
+			height: toRem(63);
+			position: absolute;
+			left: 100%;
+			top: 50%;
+			background-color: $whiteColor;
+			filter: blur(25px);
+			transform: translate(-50%, -50%);
+			pointer-events: none;
+		}
+	}
+	&__button {
+		font-size: toRem(17);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 30px;
+		border-width: 1px;
+		position: relative;
+		z-index: 2;
+
+	}
+}
 //========================================================================================================================================================
 .special-offer {
 	border: 1px solid #000;
@@ -252,4 +295,8 @@
 	}
 	&__button {
 	}
+}
+//========================================================================================================================================================
+.eapps-instagram-feed-posts-grid-load-more-enabled {
+	display: none !important;
 }
