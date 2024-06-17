@@ -5,7 +5,7 @@
 	<title>HomePage</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20240616193643">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240617193216">
 	<link rel="shortcut icon" href="favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -180,7 +180,7 @@
 							<span class="title__text">до великих результатів</span>
 						</h2>
 					</div>
-					<div data-watch class="products__swiper-area">
+					<div data-watch class="products__swiper-area--home">
 						<div class="products__buttons">
 							<button class="products__button button swiper-button swiper-button-prev _icon-arrow-left"></button>
 							<button class="products__button button swiper-button swiper-button-next _icon-arrow-right"></button>
@@ -381,7 +381,7 @@
 			</section>
 			<div class="instagram">
 				<div class="instagram__container">
-					<script src="https://static.elfsight.com/platform/platform.js?_v=20240616193643" data-use-service-core defer></script>
+					<script src="https://static.elfsight.com/platform/platform.js?_v=20240617193216" data-use-service-core defer></script>
 					<div class="elfsight-app-26bdb88f-8b1a-4b24-b4dd-177aa578bba4" data-elfsight-app-lazy></div>
 				</div>
 			</div>
@@ -393,8 +393,10 @@
 					<div class="footer__text">напиши тут свій e-mail і ми триматимемо тебе в курсі всіх акцій, подарунків та новинок</div>
 				</div>
 				<form action="#" class="footer__form mail-form">
-					<input type="email" name="email" class="mail-form__input input" placeholder="ваш Email">
-					<button type="submit" class="mail-form__button button">відправити</button>
+					<input type="email" name="email" class="mail-form__input input" placeholder="ваш Email" />
+					<div class="mail-form__button-wrapper">
+						<button type="submit" class="mail-form__button button">відправити</button>
+					</div>
 				</form>
 				<div class="footer__content">
 					<nav class="footer__menu">
@@ -415,7 +417,7 @@
 					</nav>
 					<div class="footer__main">
 						<a href="home.html" class="footer__logo">
-							<img src="img/logo-white.svg" alt="">
+							<img src="img/logo-white.svg" alt="" />
 						</a>
 						<span class="footer__logo-description">© 2024, Litty cosmetics</span>
 					</div>
@@ -427,6 +429,7 @@
 				</div>
 			</div>
 		</footer>
+
 	</div>
 	<div id="popup" aria-hidden="true" class="popup">
 		<div class="popup__wrapper">
@@ -434,11 +437,12 @@
 				<button data-close type="button" class="popup__close _icon-close"></button>
 				<div class="popup__body">
 					<h2 class="popup__sub-title">Ласкаво просимо у Litty!</h2>
-					<h3 class="popup__title">отримайте -10%
-						від вашої першої покупки</h3>
+					<h3 class="popup__title">отримайте -10% від вашої першої покупки</h3>
 					<form action="#" class="popup__form mail-form">
-						<input type="email" name="email" class="mail-form__input input" placeholder="ваш Email">
-						<button type="submit" class="mail-form__button button">відправити</button>
+						<input type="email" name="email" class="mail-form__input input" placeholder="ваш Email" />
+						<div class="mail-form__button-wrapper">
+							<button type="submit" class="mail-form__button button">відправити</button>
+						</div>
 					</form>
 					<div class="popup__text popup__text--center">Все починається з тебе!</div>
 				</div>
@@ -519,7 +523,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240616193643"></script>
+	<script src="js/app.min.js?_v=20240617193216"></script>
 </body>
 
 </html>

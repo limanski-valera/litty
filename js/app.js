@@ -4432,6 +4432,44 @@
                 });
             }));
         }
+        if (document.querySelector(".products__swiper-area--home")) {
+            const slider = document.querySelector(".products__swiper-area--home");
+            const buttonPrev = slider.querySelector(".swiper-button-prev");
+            const buttonNext = slider.querySelector(".swiper-button-next");
+            new swiper_core_Swiper(slider.querySelector(".products__swiper"), {
+                modules: [ Navigation ],
+                observer: true,
+                observeParents: true,
+                slidesPerView: 3,
+                spaceBetween: 30,
+                centeredSlides: true,
+                speed: 800,
+                loop: true,
+                lazy: true,
+                navigation: {
+                    prevEl: buttonPrev,
+                    nextEl: buttonNext
+                },
+                breakpoints: {
+                    0: {
+                        slidesPerView: 1,
+                        centeredSlides: false
+                    },
+                    600: {
+                        slidesPerView: 2,
+                        centeredSlides: false
+                    },
+                    992: {
+                        spaceBetween: 15,
+                        slidesPerView: 3,
+                        centeredSlides: true
+                    },
+                    1100: {
+                        spaceBetween: 30
+                    }
+                }
+            });
+        }
         if (document.querySelector(".reviews__swiper")) new swiper_core_Swiper(".reviews__swiper", {
             modules: [],
             observer: true,
@@ -4668,9 +4706,23 @@
             }));
         }));
     }
+    function initSpecialPopupShow() {
+        const block = document.querySelector(".products");
+        const popup = document.querySelector("#popup");
+        function openPopup() {
+            modules_flsModules.popup.open("#popup");
+            document.removeEventListener("scroll", scrollHandler);
+        }
+        function scrollHandler(e) {
+            const blockPositionY = block.getBoundingClientRect().top;
+            if (blockPositionY - 200 < 0) openPopup();
+        }
+        if (block && popup) document.addEventListener("scroll", scrollHandler);
+    }
     document.addEventListener("DOMContentLoaded", (() => {
         initCart();
         initCustomSelect("");
+        initSpecialPopupShow();
     }));
     window["FLS"] = false;
     addLoadedClass();
