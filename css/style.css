@@ -822,7 +822,8 @@ body::after {
   border-radius: 30px;
   border-width: 1px;
   position: relative;
-  z-index: 2
+  z-index: 2;
+  width: 100%
 }
 .special-offer {
   border: 1px solid #000;
