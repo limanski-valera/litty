@@ -28,8 +28,9 @@
 			height: 100%;
 		}
 		@media (max-width: $mobile) {
-            padding-bottom: 39.0625%; /* 300/768 */
+            padding-bottom: 60%;
 			width: 100%;
+			position: relative;
 		}
 	}
 	&__container {

@@ -117,8 +117,20 @@ function initSpecialPopupShow() {
 	}
 }
 
+function hideInstagramWidgetBranding() {
+	const branding = document.querySelector('.elfsight-app-26bdb88f-8b1a-4b24-b4dd-177aa578bba4 > a');
+
+	if (branding) {
+		branding.style = 'display:none';
+	}
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 	initCart();
 	initCustomSelect('');
 	initSpecialPopupShow();
+
+	setTimeout(() => {
+		hideInstagramWidgetBranding();
+	}, 2000);
 });
