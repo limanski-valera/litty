@@ -5,7 +5,7 @@
 	<title>HomePage</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20240617194108">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240707141631">
 	<link rel="shortcut icon" href="favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -33,6 +33,7 @@
 				<a href="home.html" class="header__logo"><img src="img/logo.svg" alt="" /></a>
 				<div class="header__active">
 					<a href="contacts.html" class="header__call link">зв'язатися</a>
+					<a href="shop.html" class="header__shop link ">придбати</a>
 					<button class="header__cart-btn _icon-cart"></button>
 				</div>
 			</div>
@@ -148,7 +149,7 @@
 						</div>
 						<div class="main-block__button-wrapper"><a href="#" class="main-block__button button">зібрати кастомну косметичку</a></div>
 					</div>
-					<div class="main-block__image">
+					<div data-da=".main-block__offer,767.98,1" class="main-block__image">
 						<img src="img/home/main-image.webp" alt="Group of cheerful teenagers" />
 					</div>
 				</div>
@@ -158,6 +159,25 @@
 					<div class="banners__swiper-wrapper swiper-wrapper">
 						<div class="banners__swiper-slide swiper-slide">
 							<img src="img/banners/banner-01.webp" alt="banner" />
+						</div>
+						<div class="banners__swiper-slide swiper-slide">
+							<img src="img/banners/banner-02.webp" alt="banner" />
+						</div>
+						<div class="banners__swiper-slide swiper-slide">
+							<img src="img/banners/banner-03.webp" alt="banner" />
+						</div>
+						<div class="banners__swiper-slide swiper-slide">
+							<img src="img/banners/banner-04.webp" alt="banner" />
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<div data-watch data-watch-once class="banners banners--mobile">
+				<div class="banners__swiper swiper">
+					<div class="banners__swiper-wrapper swiper-wrapper">
+						<div class="banners__swiper-slide swiper-slide">
+							<img src="img/banners/banner-01-mobile.webp" alt="banner" />
 						</div>
 						<div class="banners__swiper-slide swiper-slide">
 							<img src="img/banners/banner-02.webp" alt="banner" />
@@ -381,7 +401,7 @@
 			</section>
 			<div class="instagram">
 				<div class="instagram__container">
-					<script src="https://static.elfsight.com/platform/platform.js?_v=20240617194108" data-use-service-core defer></script>
+					<script src="https://static.elfsight.com/platform/platform.js?_v=20240707141631" data-use-service-core defer></script>
 					<div class="elfsight-app-26bdb88f-8b1a-4b24-b4dd-177aa578bba4" data-elfsight-app-lazy></div>
 				</div>
 			</div>
@@ -429,6 +449,16 @@
 				</div>
 			</div>
 		</footer>
+		<div class="loader">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" width="246" height="246" style="shape-rendering: auto; display: block; background: transparent" xmlns:xlink="http://www.w3.org/1999/xlink">
+				<g>
+					<circle stroke-linecap="round" fill="none" stroke-dasharray="50.26548245743669 50.26548245743669" stroke="#c69ce6" stroke-width="10" r="32" cy="50" cx="50">
+						<animateTransform values="0 50 50;360 50 50" keyTimes="0;1" dur="2.2222222222222223s" repeatCount="indefinite" type="rotate" attributeName="transform"></animateTransform>
+					</circle>
+					<g></g>
+				</g>
+			</svg>
+		</div>
 
 	</div>
 	<div id="popup" aria-hidden="true" class="popup">
@@ -523,7 +553,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240617194108"></script>
+	<script src="js/app.min.js?_v=20240707141631"></script>
 </body>
 
 </html>
