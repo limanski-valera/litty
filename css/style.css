@@ -197,23 +197,19 @@ textarea {
 }
 .input::-webkit-input-placeholder {
   text-transform: uppercase;
-  font-size: 1.0625rem;
-  font-weight: 500
+  font-size: 1.0625rem
 }
 .input:-ms-input-placeholder {
   text-transform: uppercase;
-  font-size: 1.0625rem;
-  font-weight: 500
+  font-size: 1.0625rem
 }
 .input::-ms-input-placeholder {
   text-transform: uppercase;
-  font-size: 1.0625rem;
-  font-weight: 500
+  font-size: 1.0625rem
 }
 .input::placeholder {
   text-transform: uppercase;
-  font-size: 1.0625rem;
-  font-weight: 500
+  font-size: 1.0625rem
 }
 .input[placeholder]:not([data-placeholder-nohiden])::-webkit-input-placeholder {
   -webkit-transition: opacity .3s;
@@ -786,6 +782,18 @@ body::after {
 .loader.absolute {
   position: absolute
 }
+.simple-popup-open-link {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0
+}
+.error {
+  color: #ca3333;
+  text-align: center
+}
 .home .special-offer {
   margin-top: -.0625rem;
   opacity: 0;
@@ -849,6 +857,18 @@ body::after {
   display: flex;
   gap: 1.375rem;
   max-width: 41.875rem
+}
+.mail-form__input::-webkit-input-placeholder {
+  font-weight: 500
+}
+.mail-form__input:-ms-input-placeholder {
+  font-weight: 500
+}
+.mail-form__input::-ms-input-placeholder {
+  font-weight: 500
+}
+.mail-form__input::placeholder {
+  font-weight: 500
 }
 .mail-form__button-wrapper {
   position: relative;
@@ -2612,6 +2632,19 @@ body::after {
   padding: .625rem .625rem;
   align-self: center
 }
+.checkout__container {
+  display: flex;
+  gap: 1.875rem
+}
+.checkout__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  flex: 1 1 auto
+}
+.checkout__title {
+  text-align: left
+}
 .swiper {
   overflow: hidden
 }
@@ -3006,6 +3039,12 @@ body::after {
     -webkit-transform: translateX(-45%);
     transform: translateX(-45%)
   }
+  .checkout__info {
+    flex: 0 0 40%
+  }
+  .checkout__info .cart__products {
+    border-top: none
+  }
 }
 @media (min-width:61.99875em) and (min-width:76.875em) {
   .contacts-main__container {
@@ -3241,6 +3280,12 @@ body::after {
   .item-step-special__title {
     font-size: 1.375rem
   }
+  .checkout {
+    padding-top: 5rem
+  }
+  .checkout {
+    padding-bottom: 5rem
+  }
 }
 @media (min-width:81.25em) {
   .send-review__title {
@@ -3378,6 +3423,9 @@ body::after {
   }
   .special-steps__button {
     padding: 1.25rem 1.5625rem
+  }
+  .checkout__info {
+    display: none
   }
 }
 @media (max-width:47.99875em) {
@@ -4093,6 +4141,12 @@ body::after {
   }
   .item-step-special__title {
     font-size: 1rem
+  }
+  .checkout {
+    padding-top: 2.5rem
+  }
+  .checkout {
+    padding-bottom: 2.5rem
   }
 }
 @media (min-width:22.5em) and (max-width:76.875em) {
@@ -4844,6 +4898,26 @@ body::after {
   @supports not (font-size:clamp(1rem ,0.8448275862rem + 0.6896551724vw ,1.375rem)) {
     .item-step-special__title {
       font-size: calc(1rem + .375 * (100vw - 22.5rem)/ 54.375)
+    }
+  }
+  @supports (padding-top:clamp(2.5rem ,1.4655172414rem + 4.5977011494vw ,5rem)) {
+    .checkout {
+      padding-top: clamp(2.5rem ,1.4655172414rem + 4.5977011494vw ,5rem)
+    }
+  }
+  @supports not (padding-top:clamp(2.5rem ,1.4655172414rem + 4.5977011494vw ,5rem)) {
+    .checkout {
+      padding-top: calc(2.5rem + 2.5 * (100vw - 22.5rem)/ 54.375)
+    }
+  }
+  @supports (padding-bottom:clamp(2.5rem ,1.4655172414rem + 4.5977011494vw ,5rem)) {
+    .checkout {
+      padding-bottom: clamp(2.5rem ,1.4655172414rem + 4.5977011494vw ,5rem)
+    }
+  }
+  @supports not (padding-bottom:clamp(2.5rem ,1.4655172414rem + 4.5977011494vw ,5rem)) {
+    .checkout {
+      padding-bottom: calc(2.5rem + 2.5 * (100vw - 22.5rem)/ 54.375)
     }
   }
 }

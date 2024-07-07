@@ -2,7 +2,7 @@
 <html lang="uk">
 
 <head>
-	<title>Special Offer</title>
+	<title>Contacts</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<link rel="stylesheet" href="css/style.min.css?_v=20240707163836">
@@ -134,174 +134,78 @@
 		</div>
 
 		<main class="page">
-			<section class="special-main">
-				<div class="special-main__container">
-					<div class="special-main__content">
-						<h1 class="special-main__title">
-							Підбери свій кастомний
-							<span class="special-main__title-bottom">
-								<img src="img/special/title-logo.svg" alt="litty" class="special-main__title-logo" />
-								догляд
-							</span>
-						</h1>
-					</div>
-					<div class="special-main__image-wrapper">
-						<div class="special-main__image">
-							<img src="img/special/special-main.webp" alt="" />
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="special-heading">
-				<div class="special-heading__container">
-					<div class="special-heading__items">
-						<article class="special-heading__item item-special-heading">
-							<h3 class="item-special-heading__title">Додай 3 засоби</h3>
-							<div class="item-special-heading__sub-title">+ косметичку</div>
-							<span class="item-special-heading__value">-10%</span>
-						</article>
-						<article class="special-heading__item item-special-heading">
-							<h3 class="item-special-heading__title">Додай 4 засоби</h3>
-							<div class="item-special-heading__sub-title">+ косметичку</div>
-							<span class="item-special-heading__value">-15%</span>
-						</article>
-						<article class="special-heading__item item-special-heading">
-							<h3 class="item-special-heading__title">Обери 5 засобів</h3>
-							<span class="item-special-heading__value item-special-heading__value--small">+ <br />
-								отримуй косметичку <br />
-								у подарунок!
-							</span>
-						</article>
-					</div>
-					<h2 class="special-heading__title title">Ну що, let’s go?</h2>
-				</div>
-			</section>
-			<form action="#" class="special-steps">
-				<div class="special-steps__step step-special">
-					<h3 class="step-special__title">яку косметичку ти хочеш?</h3>
-					<div class="step-special__container">
-						<div class="step-special__items">
-							<div class="step-special__item-wrapper">
-								<input type="radio" name="bagType" value="1" id="bt1" class="step-special__input" />
-								<label for="bt1" class="step-special__item item-step-special">
-									<span class="item-step-special__image">
-										<img src="img/products/cosmetic-bag.webp" alt="" />
-									</span>
-								</label>
+			<div class="checkout">
+				<div class="checkout__container">
+					<form action="#" class="checkout__form">
+						<h2 class="checkout__title title">Оформлення</h2>
+						<input type="text" placeholder="Імʼя" name="firstName" required class="checkout__input input" />
+						<input type="text" placeholder="Прізвищє" name="lastname" required class="checkout__input input" />
+						<select name="city" class="custom-select" required>
+							<option value="0" selected disabled>Місто</option>
+							<option value="teenager">Дніпро</option>
+							<option value="parent">Київ</option>
+						</select>
+						<select name="department" class="custom-select" required>
+							<option value="0" selected disabled>Оберіть відділення</option>
+							<option value="teenager">Відділення 1</option>
+							<option value="parent">Відділення 2</option>
+						</select>
+						<textarea name="comment" placeholder="Ваш коментар" class="checkout__textarea input"></textarea>
+						<button class="checkout__button button" type="submit">Оплатити</button>
+					</form>
+					<div class="checkout__info">
+						<ul class="cart__products">
+							<li class="cart__product product-in-cart">
+								<a href="#" class="product-in-cart__image">
+									<img src="img/products/product-01.webp" alt="" />
+								</a>
+								<div class="product-in-cart__content">
+									<h3 class="product-in-cart__title">
+										<a href="#" class="product-in-cart__link">#Cleansing Foam</a>
+									</h3>
+									<span class="product-in-cart__sum">465 грн</span>
+								</div>
+							</li>
+							<li class="cart__product product-in-cart">
+								<a href="#" class="product-in-cart__image">
+									<img src="img/products/best.webp" alt="" />
+								</a>
+								<div class="product-in-cart__content">
+									<h3 class="product-in-cart__title">
+										<a href="#" class="product-in-cart__link">кастомний догляд</a>
+									</h3>
+									<span class="product-in-cart__sum">1309.05 грн</span>
+								</div>
+							</li>
+							<li class="cart__product product-in-cart">
+								<a href="#" class="product-in-cart__image">
+									<img src="img/products/gft.webp" alt="" />
+								</a>
+								<div class="product-in-cart__content">
+									<h3 class="product-in-cart__title">
+										<a href="#" class="product-in-cart__link">подарунковий пакет</a>
+									</h3>
+									<span class="product-in-cart__sum">50 грн</span>
+								</div>
+							</li>
+						</ul>
+						<div class="checkout__totals info-cart">
+							<div class="info-cart__item">
+								<span class="info-cart__label">Знижка:</span>
+								<span class="info-cart__value">0 грн</span>
 							</div>
-							<div class="step-special__item-wrapper">
-								<input type="radio" name="bagType" value="2" id="bt2" class="step-special__input" />
-								<label for="bt2" class="step-special__item item-step-special">
-									<span class="item-step-special__image">
-										<img src="img/products/cosmetic-bag.webp" alt="" />
-									</span>
-								</label>
+							<div class="info-cart__item">
+								<span class="info-cart__label">Доставка:</span>
+								<span class="info-cart__value">від 1000 грн - безкоштовна</span>
 							</div>
-						</div>
-					</div>
-				</div>
-				<div class="special-steps__step step-special">
-					<h3 class="step-special__title">якого кольору на ній буде змійка?</h3>
-					<div class="step-special__container">
-						<div class="step-special__items">
-							<div class="step-special__item-wrapper">
-								<input type="radio" name="bagColor" value="1" id="bc1" class="step-special__input" />
-								<label for="bc1" class="step-special__item item-step-special">
-									<span class="item-step-special__image">
-										<img src="img/products/cosmetic-bag.webp" alt="" />
-									</span>
-								</label>
-							</div>
-							<div class="step-special__item-wrapper">
-								<input type="radio" name="bagColor" value="2" id="bc2" class="step-special__input" />
-								<label for="bc2" class="step-special__item item-step-special">
-									<span class="item-step-special__image">
-										<img src="img/products/cosmetic-bag.webp" alt="" />
-									</span>
-								</label>
-							</div>
-							<div class="step-special__item-wrapper">
-								<input type="radio" name="bagColor" value="3" id="bc3" class="step-special__input" />
-								<label for="bc3" class="step-special__item item-step-special">
-									<span class="item-step-special__image">
-										<img src="img/products/cosmetic-bag.webp" alt="" />
-									</span>
-								</label>
+							<div class="info-cart__item">
+								<span class="info-cart__label">До сплати:</span>
+								<span class="info-cart__value">1824.05 грн</span>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="special-steps__step step-special">
-					<h3 class="step-special__title"> обери до 5 засобів, які ти покладеш у свою нову класну косметичку </h3>
-					<div class="step-special__container">
-						<div class="step-special__items _start">
-							<div class="step-special__item-wrapper">
-								<input type="checkbox" name="product" value="1" id="pr1" class="step-special__input" />
-								<label for="pr1" class="step-special__item item-step-special">
-									<span class="item-step-special__image">
-										<img src="img/products/product-01.webp" alt="" />
-									</span>
-									<span class="item-step-special__content">
-										<span class="item-step-special__title">#Сleansing foam</span>
-										<span class="item-step-special__price">465 грн</span>
-									</span>
-								</label>
-							</div>
-							<div class="step-special__item-wrapper">
-								<input type="checkbox" name="product" value="2" id="pr2" class="step-special__input" />
-								<label for="pr2" class="step-special__item item-step-special">
-									<span class="item-step-special__image">
-										<img src="img/products/product-02.webp" alt="" />
-									</span>
-									<span class="item-step-special__content">
-										<span class="item-step-special__title">#Refreshing tonic&mist</span>
-										<span class="item-step-special__price">390 грн</span>
-									</span>
-								</label>
-							</div>
-							<div class="step-special__item-wrapper">
-								<input type="checkbox" name="product" value="3" id="pr3" class="step-special__input" />
-								<label for="pr3" class="step-special__item item-step-special">
-									<span class="item-step-special__image">
-										<img src="img/products/product-03.webp" alt="" />
-									</span>
-									<span class="item-step-special__content">
-										<span class="item-step-special__title">#Moisturizing cream-gel</span>
-										<span class="item-step-special__price">600 грн</span>
-									</span>
-								</label>
-							</div>
-							<div class="step-special__item-wrapper">
-								<input type="checkbox" name="product" value="4" id="pr4" class="step-special__input" />
-								<label for="pr4" class="step-special__item item-step-special">
-									<span class="item-step-special__image">
-										<img src="img/products/product-04.webp" alt="" />
-									</span>
-									<span class="item-step-special__content">
-										<span class="item-step-special__title">#Cream-gel with AНA acids</span>
-										<span class="item-step-special__price">690 грн</span>
-									</span>
-								</label>
-							</div>
-							<div class="step-special__item-wrapper">
-								<input type="checkbox" name="product" value="5" id="pr5" class="step-special__input" />
-								<label for="pr5" class="step-special__item item-step-special">
-									<span class="item-step-special__image">
-										<img src="img/products/product-05.webp" alt="" />
-									</span>
-									<span class="item-step-special__content">
-										<span class="item-step-special__title">#SOS cream-раste</span>
-										<span class="item-step-special__price">570 грн</span>
-									</span>
-								</label>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="special-steps__button-wrapper">
-					<button class="special-steps__button" disabled type="submit">Додати до кошика</button>
-				</div>
-			</form>
+			</div>
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
