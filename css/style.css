@@ -2142,9 +2142,7 @@ body::after {
   background-color: #e3ef91
 }
 .certificates-section__container {
-  max-width: 83.125rem;
-  display: flex;
-  gap: 2.1875rem
+  max-width: 83.125rem
 }
 .certificates-section__swiper {
   flex: 1 0 58.461538%
@@ -2319,16 +2317,19 @@ body::after {
 }
 .contacts-info__attention {
   font-weight: 500;
-  display: flex;
-  flex-direction: column;
-  gap: 3.125rem
+  padding-bottom: 6.25rem
 }
 .contacts-info__attention::after {
+  position: absolute;
   content: "";
   width: 3.75rem;
   height: 3.4375rem;
   background: url(../img/cantacts-heart.svg) center center/contain no-repeat;
-  align-self: center
+  align-self: center;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%)
 }
 .simple-link {
   color: #9d76c5
@@ -3045,6 +3046,11 @@ body::after {
   .benefits__list {
     display: grid;
     grid-template-columns: repeat(2,1fr)
+  }
+  .certificates-section__container {
+    display: flex;
+    gap: 2.1875rem;
+    flex-direction: row-reverse
   }
 }
 @media (min-width:47.99875em) and (min-width:75em) {
@@ -3850,14 +3856,11 @@ body::after {
   .benefits__item:not(:last-child) {
     margin-bottom: .9375rem
   }
-  .certificates-section__container {
-    flex-direction: column
-  }
   .certificates-section__swiper {
     order: 2
   }
   .certificates-section__description {
-    order: 1
+    margin-bottom: 1.25rem
   }
   .send-review__form {
     gap: .9375rem
