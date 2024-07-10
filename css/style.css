@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Unbounded:300,regular,500,600,700&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Inter:regular,700&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Montserrat:300,500,700&display=swap);
@@ -845,7 +846,7 @@ body::after {
 }
 .title__small {
   font-weight: 300;
-  text-transform: lowercase
+  text-transform: none
 }
 .title--best .title__small {
   font-weight: 400
@@ -899,7 +900,8 @@ body::after {
   border-width: 1px;
   position: relative;
   z-index: 2;
-  width: 100%
+  width: 100%;
+  font-weight: 400
 }
 .special-offer {
   border: 1px solid #000;
@@ -910,46 +912,59 @@ body::after {
   color: #fff;
   display: block;
   position: relative;
-  z-index: 3
+  z-index: 3;
+  overflow: hidden
 }
 .special-offer__text {
   display: inline-block;
   transition: -webkit-transform .3s;
   transition: transform .3s;
-  transition: transform .3s,-webkit-transform .3s;
-  -webkit-animation: specialOfferText 2s infinite linear;
-  animation: specialOfferText 2s infinite linear
+  transition: transform .3s,-webkit-transform .3s
 }
-.special-offer:active .special-offer__text {
-  -webkit-transform: scale(1.05);
-  transform: scale(1.05)
+.special-offer:after {
+  background: #fff;
+  content: "";
+  height: 155px;
+  left: -150px;
+  opacity: .2;
+  position: absolute;
+  top: -50px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  width: 400px;
+  z-index: -10;
+  -webkit-animation: special 5s infinite linear;
+  animation: special 5s infinite linear;
+  pointer-events: none
 }
-@-webkit-keyframes specialOfferText {
+@-webkit-keyframes special {
   0% {
-    -webkit-transform: scale(1);
-    transform: scale(1)
+    left: -150px
   }
-  50% {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2)
+  20% {
+    left: 120%;
+    opacity: .2
+  }
+  21% {
+    opacity: 0
   }
   100% {
-    -webkit-transform: scale(1);
-    transform: scale(1)
+    opacity: 0
   }
 }
-@keyframes specialOfferText {
+@keyframes special {
   0% {
-    -webkit-transform: scale(1);
-    transform: scale(1)
+    left: -150px
   }
-  50% {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2)
+  20% {
+    left: 120%;
+    opacity: .2
+  }
+  21% {
+    opacity: 0
   }
   100% {
-    -webkit-transform: scale(1);
-    transform: scale(1)
+    opacity: 0
   }
 }
 .text-block {
@@ -2645,6 +2660,79 @@ body::after {
 .checkout__title {
   text-align: left
 }
+.text-page {
+  padding-top: 2.5rem;
+  padding-bottom: 7.5rem
+}
+.text-page__titles {
+  text-align: center;
+  line-height: 1.5;
+  font-weight: 700;
+  font-size: 1.375rem;
+  letter-spacing: .4px;
+  margin-bottom: 1.5625rem;
+  color: #333
+}
+.text-page__body {
+  color: #2c2c2c;
+  letter-spacing: .4px;
+  line-height: 1.65
+}
+.text-page__body > *:not(:last-child) {
+  margin-bottom: 1.25rem
+}
+.text-page__body ol {
+  list-style: none;
+  counter-reset: li
+}
+.text-page__body ol > li::before {
+  counter-increment: li;
+  content: counters(li, ".") ". "
+}
+.text-page__body ol > li:not(:last-child) {
+  margin-bottom: 1.875rem
+}
+.text-page__body ol > li ol > li:not(:last-child) {
+  margin-bottom: 0
+}
+.text-page__body ol > li ol > li > ol {
+  counter-reset: second
+}
+.text-page__body ol > li ol > li > ol > li::before {
+  content: "";
+  margin-left: 1.875rem
+}
+.text-page__body ol > li ol > li > ol > li:nth-child(1)::before {
+  content: "a)"
+}
+.text-page__body ol > li ol > li > ol > li:nth-child(2)::before {
+  content: "б)"
+}
+.text-page__body ol > li ol > li > ol > li:nth-child(3)::before {
+  content: "в)"
+}
+.text-page__body ol > li ol > li > ol > li:nth-child(4)::before {
+  content: "г)"
+}
+.text-page__body ol > li ol > li > ol > li:nth-child(5)::before {
+  content: "ґ)"
+}
+.text-page__body ol > li ol > li > ol > li:nth-child(6)::before {
+  content: "д)"
+}
+.text-page__body ol > li ol > li > ol > li:nth-child(7)::before {
+  content: "е)"
+}
+.text-page__body ol > li ol > li > ol > li:nth-child(8)::before {
+  content: "є)"
+}
+.text-page__body ol > li ol > li > ol > li:nth-child(9)::before {
+  content: "ж)"
+}
+.text-page__body ul li::before {
+  content: "-";
+  margin-right: 30px
+}
 .swiper {
   overflow: hidden
 }
@@ -2964,6 +3052,11 @@ body::after {
   }
   .benefits__list {
     gap: 6.25rem
+  }
+}
+@media (min-width:47.99875em) and (min-width:68.75rem) {
+  .footer__content {
+    grid-template-columns: 25rem auto 25rem
   }
 }
 @media (min-width:61.99875em) {
@@ -3286,6 +3379,9 @@ body::after {
   .checkout {
     padding-bottom: 5rem
   }
+  .text-page__body {
+    font-size: 1.25rem
+  }
 }
 @media (min-width:81.25em) {
   .send-review__title {
@@ -3368,6 +3464,12 @@ body::after {
 @media (max-width:61.99875em) {
   .product-in-popup__left {
     max-width: 12.5rem
+  }
+  .special-offer:after {
+    width: 200px;
+    height: 75px;
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s
   }
   .main-block__offer:not(:last-child) {
     margin-bottom: 4.375rem
@@ -4148,6 +4250,9 @@ body::after {
   .checkout {
     padding-bottom: 2.5rem
   }
+  .text-page__body {
+    font-size: 1rem
+  }
 }
 @media (min-width:22.5em) and (max-width:76.875em) {
   @supports (padding-top:clamp(2.5rem ,0.1724137931rem + 10.3448275862vw ,8.125rem)) {
@@ -4920,6 +5025,16 @@ body::after {
       padding-bottom: calc(2.5rem + 2.5 * (100vw - 22.5rem)/ 54.375)
     }
   }
+  @supports (font-size:clamp(1rem ,0.8965517241rem + 0.4597701149vw ,1.25rem)) {
+    .text-page__body {
+      font-size: clamp(1rem ,.8965517241rem + .4597701149vw ,1.25rem)
+    }
+  }
+  @supports not (font-size:clamp(1rem ,0.8965517241rem + 0.4597701149vw ,1.25rem)) {
+    .text-page__body {
+      font-size: calc(1rem + .25 * (100vw - 22.5rem)/ 54.375)
+    }
+  }
 }
 @media (min-width:47.99875em) and (min-width:62em) and (max-width:75em) {
   @supports (gap:clamp(3.125rem ,-26.6826923077rem + 48.0769230769vw ,9.375rem)) {
@@ -5200,9 +5315,8 @@ body::after {
     bottom: -5px;
     opacity: 1
   }
-  .special-offer:hover .special-offer__text {
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05)
+  .special-offer:hover:after {
+    left: 120%
   }
   .card__image:hover img {
     -webkit-transform: scale(1.05);

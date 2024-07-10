@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="uk">
+
+<head>
+	<title>Оферта</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240710124524">
+	<link rel="shortcut icon" href="favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="header__menu menu">
+					<button type="button" class="menu__icon icon-menu"><span></span></button>
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a href="shop.html" class="menu__link link"><span class="menu__text">придбати</span><span class="menu__text--active">придбати</span></a>
+							</li>
+							<li class="menu__item">
+								<a href="about-01.html" class="menu__link link"><span class="menu__text">дізнатися</span><span class="menu__text--active">дізнатися</span></a>
+							</li>
+							<li class="menu__item">
+								<a href="reviews.html" class="menu__link link"><span class="menu__text">відгуки</span><span class="menu__text--active">відгуки</span></a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<a href="home.html" class="header__logo"><img src="img/logo.svg" alt="" /></a>
+				<div class="header__active">
+					<a href="contacts.html" class="header__call link">зв'язатися</a>
+					<a href="shop.html" class="header__shop link ">придбати</a>
+					<button class="header__cart-btn _icon-cart"></button>
+				</div>
+			</div>
+		</header>
+		<div class="cart">
+			<div class="cart__body">
+				<div class="cart__head">
+					<h3 class="cart__title">кошик<span class="cart__title-count">(3)</span></h3>
+					<button class="cart__close-btn _icon-close"></button>
+				</div>
+				<!-- <div class="cart__placeholder">
+            Ваш кошик порожній...
+        </div> -->
+				<div class="cart__content">
+					<ul class="cart__products">
+						<li class="cart__product product-in-cart">
+							<a href="#" class="product-in-cart__image">
+								<img src="img/products/product-01.webp" alt="" />
+							</a>
+							<div class="product-in-cart__content">
+								<h3 class="product-in-cart__title">
+									<a href="#" class="product-in-cart__link">#Cleansing Foam</a>
+								</h3>
+								<span class="product-in-cart__sum">465 грн</span>
+								<div data-quantity class="quantity">
+									<button data-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
+									<div class="quantity__input">
+										<input data-quantity-value type="text" value="1" />
+									</div>
+									<button data-quantity-plus type="button" class="quantity__button quantity__button--plus"></button>
+								</div>
+							</div>
+						</li>
+						<li class="cart__product product-in-cart">
+							<a href="#" class="product-in-cart__image">
+								<img src="img/products/best.webp" alt="" />
+							</a>
+							<div class="product-in-cart__content">
+								<h3 class="product-in-cart__title">
+									<a href="#" class="product-in-cart__link">кастомний догляд</a>
+								</h3>
+								<span class="product-in-cart__sum">1309.05 грн</span>
+								<div data-quantity class="quantity">
+									<button data-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
+									<div class="quantity__input">
+										<input data-quantity-value type="text" value="1" />
+									</div>
+									<button data-quantity-plus type="button" class="quantity__button quantity__button--plus"></button>
+								</div>
+							</div>
+						</li>
+						<li class="cart__product product-in-cart">
+							<a href="#" class="product-in-cart__image">
+								<img src="img/products/gft.webp" alt="" />
+							</a>
+							<div class="product-in-cart__content">
+								<h3 class="product-in-cart__title">
+									<a href="#" class="product-in-cart__link">подарунковий пакет</a>
+								</h3>
+								<span class="product-in-cart__sum">50 грн</span>
+								<div data-quantity class="quantity">
+									<button data-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
+									<div class="quantity__input">
+										<input data-quantity-value type="text" value="1" />
+									</div>
+									<button data-quantity-plus type="button" class="quantity__button quantity__button--plus"></button>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<form action="#" class="cart__promotion-form">
+						<input type="text" placeholder="Знижка" class="cart__promotion-form-input input" />
+						<button class="cart__promotion-form-button button" type="submit">Використовувати</button>
+					</form>
+					<div class="cart__gft-box">
+						<button class="cart__gft-box-button button button--white">Додаткові подарункові упаковки</button>
+					</div>
+					<div class="cart__info info-cart">
+						<div class="info-cart__item">
+							<span class="info-cart__label">Знижка:</span>
+							<span class="info-cart__value">0 грн</span>
+						</div>
+						<div class="info-cart__item">
+							<span class="info-cart__label">Доставка:</span>
+							<span class="info-cart__value">від 1000 грн - безкоштовна</span>
+						</div>
+						<div class="info-cart__item">
+							<span class="info-cart__label">До сплати:</span>
+							<span class="info-cart__value">1824.05 грн</span>
+						</div>
+					</div>
+					<div class="cart__footer">
+						<a href="#" class="cart__button button">Перейти до сплати</a>
+						<a href="#" class="cart__button button button--white">Продовжити покупки</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<main class="page text-page">
+			<div class="text-page__container">
+				<div class="text-page__titles">
+					<h1 class="text-page__title">ДОГОВІР ПУБЛІЧНОЇ ОФЕРТИ</h1>
+					<h2 class="text-page__title">про купівлю-продаж косметичних засобів</h2>
+					<h2 class="text-page__title">через сайт http://litty.com.ua</h2>
+				</div>
+
+				<div class="text-page__body">
+					<p>
+						Цей Договір публічної оферти (надалі Договір) – є публічним договором відповідно до статті 633 Цивільного кодексу України. Його умови є однаковими для всіх покупців
+						незалежно від статусу (фізична особа, юридична особа, фізична особа - підприємець). При акцептуванні Договору публічної оферти покупець приймає всі умови Договору і порядок
+						оформлення замовлення, оплати та доставки товару.
+					</p>
+					<ol>
+						<li>
+							Загальні положення
+							<ol>
+								<li>Взаємовідносини Продавця і Покупця регулюються та визначаються умовами даного Договору та чинним законодавством України.</li>
+								<li>Цей Договір є еквівалентом "усної угоди" і відповідно до чинного законодавства України має належну юридичну силу.</li>
+								<li>
+									У відповідності до ст. 642 Цивільного Кодексу України повним і безсуперечним прийняттям (акцептуванням) умов Договору є факт відправлення замовлення шляхом
+									натискання на посилання "Замолення підтверджую" в кошику замовлень та/або внесення оплати за замовлення в розмірі 100% на умовах цього Договору.
+								</li>
+								<li>
+									Акцептуючи Договір, Покупець підтверджує, що цілком і повністю ознайомлений та згодний з його умовами, характеристиками та  цінами Товару, а також, у разі, якщо
+									Покупець є фізичною особою, він надає дозвіл на обробку своїх персональних даних з метою можливості виконання умов цього Договору, проведення взаєморозрахунків,
+									а також для отримання рахунків, актів та інших документів. Дозвіл на обробку персональних даних діє протягом усього строку дії Договору. Крім цього, укладанням
+									цього Договору Покупець підтверджує, що йому відомі (без додаткового повідомлення) та зрозумілі положення Закону України «Про захист персональних даних».
+								</li>
+								<li>
+									Погоджуючись з умовами Договору Покупець підтверджує свою правоздатність та дієздатність, включаючи досягнення 18-річного віку, законне користування банківською
+									платіжною картою, а також усвідомлює відповідальність та наслідки за зобов’язаннями, що покладаються на нього в результаті укладення цього Договору
+								</li>
+							</ol>
+						</li>
+						<li>
+							Терміни та визначення
+							<ol>
+								<li>
+									«Інтернет-магазин» – сайт Продавця (http://litty.com.ua/), створений для укладення договорів купівлі-продажу дистанційно за допомогою мережі Інтернет на
+									підставі ознайомлення Покупця з запропонованим Продавцем описом та фотознімками Товару
+								</li>
+								<li>"Товар" – перелік найменувань асортименту, представлений в Інтернет-магазині.</li>
+								<li>"Персональні дані" – будь-яка інформація, яка прямо чи опосередковано відноситься до певної особи, чи до особи, яка визначається.</li>
+								<li>
+									«Договір публічної оферти» або «Договір» – публічний Договір, зразок якого розміщено на сайті  за посиланням: https://litty.com.ua/oferta і застосування якого є
+									обов'язковим для всіх, хто бажає придбати Товар, зображення якого розміщено на Сайті, а також спрямоване невизначеному колу осіб, у тому числі Покупцям.
+								</li>
+								<li>
+									 «Продавець» - фізична  особа-підприємець Шаулов Олексій Семенович, яка зареєстрована відповідно до чинного законодавства України,  яка є власником та/або
+									розповсюджувачем Товару за допомогою Сайту, та має намір його продати.
+								</li>
+								<li>«Покупець» будь-яка дієздатна фізична особа чи юридична особа, фізична особа - підприємець</li>
+								<li>«Ціна» – вартість, виражена в грошовій одиниці української гривні (UAH), яку Покупець зобов’язаний заплатити Продавцю за Товар.</li>
+								<li>
+									«Політика конфіденційності» – документ, який визначає положення щодо обробки персональних даних Покупця. Із повний текстом Політики конфіденційності можна
+									ознайомитись за посиланням: https://litty.com.ua/privacy.
+								</li>
+								<li>«Подарункові сертифікати» - подарункові електронні сертифікати із гривневим номіналом, які можна обміняти на Товари, що доступні на Сайті.</li>
+								<li>
+									«Істотний недолік товару» - недолік, який робить неможливим використання Товару відповідно до його цільового призначення, та який виник з вини виробника або
+									Продавця
+								</li>
+							</ol>
+						</li>
+						<li>
+							Предмет договору
+							<ol>
+								<li>Продавець зобов'язується передати у власність Покупцеві Товар, а Покупець зобов'язується оплатити і прийняти Товар на умовах цього Договору.</li>
+								<li>
+									Цей Договір регулює умови організації купівлі-продажу Товару дистанційним способом через Інтернет-магазин, в тому числі:
+									<ol>
+										<li>добровільний вибір Покупцем товарів в Інтернет-магазині;</li>
+										<li>самостійне оформлення Покупцем замовлення на сайті в Інтернет-магазині;</li>
+										<li>оформлення Покупцем замовлення за допомогою телефонних засобів зв’язку;</li>
+										<li>оплата Покупцем замовлення, оформленого в Інтернет-магазині;</li>
+										<li>виконання і передача замовлення Покупцеві у власність на умовах цього Договору.</li>
+									</ol>
+								</li>
+								<li>
+									Якість Товару повинна відповідати вимогам чинної нормативно-технічної документації та підтверджується відповідними документами (гігієнічними висновками),
+									встановленими чинним законодавством для даного виду Товару.
+								</li>
+							</ol>
+						</li>
+						<li>
+							Порядок оформлення замовлення
+							<ol>
+								<li>
+									Покупець самостійно оформляє замовлення онлайн через кошик Інтернет-магазину, шляхом заповнення відомостей, або за допомогою телефонних засобів зв’язку (через
+									оператора) за контактами та правилами, вказаними в Інтернет-магазині.
+									<p>Для формування Замовлення Покупцю необхідно:</p>
+									<ul>
+										<li>відвідати Сайт;</li>
+										<li>обрати Товар відповідного асортименту, який влаштовує по ціні та обрати «Додати до Кошику»;</li>
+										<li>обрати «Перейти до формування Замовлення»;</li>
+										<li>вказати прізвище та ім’я;</li>
+										<li>вказати адресу електронної пошти та номер телефону;</li>
+										<li>надати інформацію про адресу доставки;</li>
+										<li>обрати один із доступних способів оплати за Товар (укладення Договору);</li>
+										<li>закінчити формування Замовлення нажавши «Замовлення підтверджую»</li>
+									</ul>
+								</li>
+								<li>Покупець несе відповідальність за повноту та достовірність даних, вказаних в анкеті.</li>
+								<li>
+									Натискаючи на посилання "Замовлення підтвреджую" в кошику замовлень, Покупець підтверджує, що він повністю ознайомився з характеристиками замовленого Товару та
+									умовами цього Договору, і погоджується на їх виконання.
+								</li>
+								<li>Найменування, кількість, артикул, ціна обраного Покупцем Товару вказуються в кошику Покупця на сайті Інтернет-магазину.</li>
+								<li>
+									Якщо будь-якої із Сторін договору необхідна додаткова інформація, він має право запросити її у іншої Сторони. У разі ненадання необхідної інформації Покупцем,
+									Продавець не несе відповідальності за надання якісної послуги Покупцю при покупці товару в інтернет-магазині.
+								</li>
+								<li>При оформленні замовлення через оператора Продавця Покупець зобов'язується надати інформацію, зазначену в п. 4.1. цієї Оферти. </li>
+								<li>
+									Схвалення (прийняття, акцептування) Покупцем умов цієї Оферти здійснюється за допомогою внесення Покупцем відповідної інформації на сайті Інтернет-магазину або
+									при оформленні Замовлення через оператора. Після оформлення Замовлення через Оператора дані про Покупця вносяться до бази даних Продавця.
+								</li>
+								<li>Покупець несе відповідальність за достовірність наданої інформації при оформленні Замовлення.</li>
+								<li>
+									Укладаючи Договір, тобто акцептуючи умови даної  пропозиції (запропоновані умови придбання Товару), шляхом оформлення Замовлення, Покупець підтверджує наступне:
+									<ol>
+										<li>Покупець цілком і повністю ознайомлений, і згоден з умовами цієї пропозиції (оферти);  </li>
+										<li>
+											він дає дозвіл на збір, обробку та передачу персональних даних, дозвіл на обробку персональних даних діє протягом усього терміну дії Договору, а також
+											протягом необмеженого терміну після закінчення його дії. Крім цього, укладенням договору Покупець підтверджує, що він повідомлений (без додаткового
+											повідомлення) про права, встановлені Законом України "Про захист персональних даних", про цілі збору даних, а також про те, що його персональні дані
+											передаються Продавцю з метою можливості виконання умов цього Договору, можливості проведення взаєморозрахунків, а також для отримання рахунків, актів та
+											інших документів. Покупець також погоджується з тим, що Продавець має право надавати доступ та передавати його персональні дані третім особам без
+											будь-яких додаткових повідомлень Покупця з метою виконання замовлення Покупця. Обсяг прав Покупця, як суб'єкта персональних даних відповідно до Закону
+											України "Про захист персональних даних" йому відомий і зрозумілий. 
+										</li>
+									</ol>
+								</li>
+							</ol>
+						</li>
+					</ol>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__title-block">
+					<h4 class="footer__title">Давай залишатися на зв'язку</h4>
+					<div class="footer__text">напиши тут свій e-mail і ми триматимемо тебе в курсі всіх акцій, подарунків та новинок</div>
+				</div>
+				<form action="#" class="footer__form mail-form">
+					<input type="email" name="email" class="mail-form__input input" placeholder="ваш Email" />
+					<div class="mail-form__button-wrapper">
+						<button type="submit" class="mail-form__button button">відправити</button>
+					</div>
+				</form>
+				<div class="footer__content">
+					<nav class="footer__menu">
+						<ul class="footer__menu-list">
+							<li class="footer__menu-item">
+								<a href="shop.html" class="footer__menu-link">придбати</a>
+							</li>
+							<li class="footer__menu-item">
+								<a href="about-01.html" class="footer__menu-link">дізнатися</a>
+							</li>
+							<li class="footer__menu-item">
+								<a href="reviews.html" class="footer__menu-link">відгуки</a>
+							</li>
+							<li class="footer__menu-item">
+								<a href="contacts.html" class="footer__menu-link">зв'язатися</a>
+							</li>
+							<li class="footer__menu-item">
+								<a href="contacts.html" class="footer__menu-link">Політика конфіденційності</a>
+							</li>
+							<li class="footer__menu-item">
+								<a href="contacts.html" class="footer__menu-link">Публічна оферта</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="footer__main">
+						<a href="home.html" class="footer__logo">
+							<img src="img/logo-white.svg" alt="" />
+						</a>
+						<span class="footer__logo-description">© 2024, Litty cosmetics</span>
+					</div>
+					<div class="footer__social social">
+						<a href="https://www.instagram.com/litty.cosmetics" target="_blank" class="social__link _icon-s-insta"></a>
+						<a href="#" target="_blank" class="social__link _icon-s-tiktok"></a>
+						<a href="#" target="_blank" class="social__link _icon-s-facebook"></a>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<div class="loader">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" width="246" height="246" style="shape-rendering: auto; display: block; background: transparent" xmlns:xlink="http://www.w3.org/1999/xlink">
+				<g>
+					<circle stroke-linecap="round" fill="none" stroke-dasharray="50.26548245743669 50.26548245743669" stroke="#c69ce6" stroke-width="10" r="32" cy="50" cx="50">
+						<animateTransform values="0 50 50;360 50 50" keyTimes="0;1" dur="2.2222222222222223s" repeatCount="indefinite" type="rotate" attributeName="transform"></animateTransform>
+					</circle>
+					<g></g>
+				</g>
+			</svg>
+		</div>
+		<a href="#" data-popup="#popup-simple" class="simple-popup-open-link"></a>
+		<div id="popup-simple" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close _icon-close"></button>
+					<div class="popup__body">
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+	<div id="popup-product" aria-hidden="true" class="popup popup-product">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__body">
+					<article class="product-in-popup _blue">
+						<div class="product-in-popup__left">
+							<div class="product-in-popup__slider swiper">
+								<div class="product-in-popup__wrapper swiper-wrapper">
+									<div class="product-in-popup__slide swiper-slide">
+										<img src="img/products/product-01.webp" alt="" />
+									</div>
+									<div class="product-in-popup__slide swiper-slide">
+										<img src="img/products/product-02.webp" alt="" />
+									</div>
+									<div class="product-in-popup__slide swiper-slide">
+										<img src="img/products/product-03.webp" alt="" />
+									</div>
+								</div>
+								<div class="swiper-pagination"></div>
+							</div>
+							<span class="product-in-popup__price">465 грн</span>
+						</div>
+						<div class="product-in-popup__right">
+							<h2 class="product-in-popup__title">#Cleansing Foam</h2>
+							<div class="product-in-popup__text">
+								<p>Крутий засіб з унікальною формулою, створений для сміливості, впевненості та чистої шкіри! </p>
+								<p>
+									Якщо ви шукаєте засіб, який допоможе одночасно очистити шкіру від бруду, макіяжу, надлишку себуму та захистити шкіру від виникнення запалень (а це супер важливо!) +
+									додатково зволожити її – ви потрапили за адресою! 
+								</p>
+								<p>Ця пінка створена спеціально для підліткової шкіри!</p>
+								<p>
+									Унікальний склад сприяє відлущуванню ороговілих клітин твоєї шкіри, звуженню пор, ще й бореться з чорними точками, роблячи твою шкіру свіжою, заспокоєною, та готовою до
+									будь-яких випробувань!
+								</p>
+							</div>
+							<div class="product-in-popup__actions">
+								<div data-quantity class="product-in-popup__quantity quantity">
+									<button data-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
+									<div class="quantity__input">
+										<input data-quantity-value type="text" value="1" />
+									</div>
+									<button data-quantity-plus type="button" class="quantity__button quantity__button--plus"></button>
+								</div>
+								<button class="product-in-popup__add-button button">Додати до кошика</button>
+							</div>
+							<div data-spollers data-one-spoller class="product-in-popup__spollers simple-spollers">
+								<details class="simple-spollers__item">
+									<summary class="simple-spollers__title _icon-daw-bottom">як користуватися</summary>
+									<div class="simple-spollers__body text-block">
+										<ul>
+											<li>Крок 1: немає кращого способу почати день, ніж освіжити обличчя водою. Холодною чи теплою – вибирати тобі!</li>
+											<li>
+												Крок 2: нанеси пінку #CLEANSING FOAM на обличчя, помасажуй, приділяючи особливу увагу Т-зоні, де зазвичай виникають висипання. А ще краще, під час очищення
+												увімкни веселу музику… повір, це чудовий спосіб розпочати свій день!
+											</li>
+										</ul>
+									</div>
+								</details>
+								<details class="simple-spollers__item">
+									<summary class="simple-spollers__title _icon-daw-bottom">інгредієнти</summary>
+									<div class="simple-spollers__body">Контент спойлера</div>
+								</details>
+								<details class="simple-spollers__item">
+									<summary class="simple-spollers__title _icon-daw-bottom">Секретні формули</summary>
+									<div class="simple-spollers__body">Контент спойлера</div>
+								</details>
+							</div>
+						</div>
+					</article>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20240710124524"></script>
+</body>
+
+</html>
