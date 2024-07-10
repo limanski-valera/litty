@@ -1410,7 +1410,8 @@ body::after {
   font-weight: 500
 }
 .info-cart__value {
-  font-weight: 300
+  font-weight: 300;
+  text-align: right
 }
 .main-block {
   padding: 6.875rem 0 3.25rem;
