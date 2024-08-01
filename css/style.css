@@ -795,6 +795,9 @@ body::after {
   color: #ca3333;
   text-align: center
 }
+.text-center {
+  text-align: center
+}
 .home .special-offer {
   margin-top: -.0625rem;
   opacity: 0;
@@ -887,7 +890,10 @@ body::after {
   filter: blur(25px);
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
-  pointer-events: none
+  pointer-events: none;
+  transition: opacity .3s,-webkit-transform .3s,-webkit-filter .3s;
+  transition: transform .3s,opacity .3s,filter .3s;
+  transition: transform .3s,opacity .3s,filter .3s,-webkit-transform .3s,-webkit-filter .3s
 }
 .mail-form__button {
   font-size: 1.0625rem;
@@ -1122,11 +1128,9 @@ body::after {
   align-items: center
 }
 .header__call {
-  font-size: 1rem;
   text-transform: uppercase
 }
 .header__shop {
-  font-size: 1rem;
   text-transform: uppercase
 }
 .header__cart-btn {
@@ -1443,18 +1447,6 @@ body::after {
 .main-block__title--with-decor {
   display: inline-block;
   position: relative
-}
-.main-block__title--with-decor::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-47%,-50%);
-  transform: translate(-47%,-50%);
-  width: 120%;
-  background: url(../img/home/offer-decor.svg) center center/contain no-repeat;
-  height: 200%;
-  z-index: -1
 }
 .main-block__text {
   font-weight: 300;
@@ -1952,20 +1944,6 @@ body::after {
 .shop-main-block__title:not(:last-child) {
   margin-bottom: 3.125rem
 }
-.shop-main-block__title--accent {
-  position: relative
-}
-.shop-main-block__title--accent::after {
-  content: "";
-  position: absolute;
-  top: calc(100% + .3125rem);
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  width: 200%;
-  padding-bottom: 16%;
-  background: url(../img/shop/decor-main-title.webp) center center/contain no-repeat
-}
 .shop-main-block__sub-title {
   color: #000;
   font-weight: 300;
@@ -2152,7 +2130,8 @@ body::after {
   aspect-ratio: 240/340;
   overflow: hidden;
   position: relative;
-  border: 1px solid #2c2c2c
+  border: 1px solid #2c2c2c;
+  min-height: 21.875rem
 }
 .certificates-section__image {
   position: absolute;
@@ -2178,15 +2157,6 @@ body::after {
 .send-review__title-decorator {
   position: relative;
   display: inline-block
-}
-.send-review__title-decorator::before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  padding-bottom: 7.002801%;
-  background: url(../img/review-title-decor.svg) center center/contain no-repeat
 }
 .send-review__form {
   display: flex;
@@ -2954,6 +2924,18 @@ body::after {
     pointer-events: none;
     background: url(../img/home/main-block-gradient-top.svg) top left/contain no-repeat
   }
+  .main-block__title--with-decor::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-47%,-50%);
+    transform: translate(-47%,-50%);
+    width: 120%;
+    background: url(../img/home/offer-decor.svg) center center/contain no-repeat;
+    height: 200%;
+    z-index: -1
+  }
   .main-block__button-wrapper::before {
     top: -1.5625rem
   }
@@ -3028,6 +3010,20 @@ body::after {
   .shop-main-block__content {
     max-width: 62%
   }
+  .shop-main-block__title--accent {
+    position: relative
+  }
+  .shop-main-block__title--accent::after {
+    content: "";
+    position: absolute;
+    top: calc(100% + .3125rem);
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 200%;
+    padding-bottom: 16%;
+    background: url(../img/shop/decor-main-title.webp) center center/contain no-repeat
+  }
   .shop-main-block__sub-title {
     position: relative
   }
@@ -3051,6 +3047,15 @@ body::after {
     display: flex;
     gap: 2.1875rem;
     flex-direction: row-reverse
+  }
+  .send-review__title-decorator::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding-bottom: 7.002801%;
+    background: url(../img/review-title-decor.svg) center center/contain no-repeat
   }
 }
 @media (min-width:47.99875em) and (min-width:75em) {
@@ -3709,9 +3714,6 @@ body::after {
   .info-cart__item {
     font-size: .875rem
   }
-  .main-block__title--with-decor::before {
-    background: url(../img/home/offer-decor-mobile.svg) center center/contain no-repeat
-  }
   .main-block__text {
     text-align: center;
     max-width: 15.625rem;
@@ -3951,7 +3953,7 @@ body::after {
   .header__container {
     gap: 1.875rem
   }
-  .header__call {
+  .header__shop {
     font-size: .75rem
   }
   .cart__promotion-form {
