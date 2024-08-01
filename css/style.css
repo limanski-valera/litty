@@ -890,9 +890,8 @@ body::after {
   filter: blur(25px);
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
-  transition: opacity .3s,-webkit-transform .3s;
-  transition: transform .3s,opacity .3s;
-  transition: transform .3s,opacity .3s,-webkit-transform .3s
+  border-radius: 50%;
+  pointer-events: none
 }
 .mail-form__button {
   font-size: 1.0625rem;
