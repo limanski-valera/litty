@@ -64,8 +64,16 @@
 		}
 	}
 	&__call {
-		font-size: toRem(16);
 		text-transform: uppercase;
+		@media (max-width: $mobile) {
+			display: none;
+		}
+	}
+	&__shop {
+		text-transform: uppercase;
+		@media (min-width: $mobile) {
+			display: none;
+		}
 		@media (max-width: $mobileSmall) {
 			font-size: toRem(12);
 		}

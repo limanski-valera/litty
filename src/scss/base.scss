@@ -1,15 +1,15 @@
 // Загальний файл елементів форм
 // Для підключення/відключення стилів конкретного елемента форми дивись base/forms/forms.scss
-@import "base/forms/forms";
+@import 'base/forms/forms';
 
 // Стилі меню + бургер
-@import "base/menu";
+@import 'base/menu';
 
 // Стилі попапів
-@import "base/popup";
+@import 'base/popup';
 
 // Стилі спойлерів
-@import "base/spollers";
+@import 'base/spollers';
 
 // Стилі табів
 // @import "base/tabs";
@@ -140,4 +140,36 @@
 	&::-webkit-scrollbar {
 		display: none;
 	}
+}
+.loader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 200;
+	background-color: rgb(255, 255, 255, 0.8);
+	visibility: hidden;
+	opacity: 0;
+	&.absolute {
+		position: absolute;
+	}
+}
+.simple-popup-open-link {
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+}
+.error {
+	color: rgb(202, 51, 51);
+	text-align: center;
+}
+.text-center {
+	text-align: center;
 }

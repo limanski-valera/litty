@@ -3,6 +3,9 @@ import { isMobile } from './functions.js';
 // Підключення списку активних модулів
 import { flsModules } from './modules.js';
 
+import Swiper from 'swiper';
+import { EffectFade, Pagination } from 'swiper/modules';
+
 function initCart() {
 	const cartButton = document.querySelector('.header__cart-btn');
 	const cart = document.querySelector('.cart');
@@ -18,10 +21,10 @@ function initCart() {
 	}
 
 	if (cartButton && cart) {
-		cartButton.addEventListener('click', openCart);
-
-		cart.addEventListener('click', (e) => {
-			if (!e.target.closest('.cart__body') || e.target.closest('.cart__close-btn')) {
+		document.addEventListener('click', (e) => {
+			if (e.target.closest('.header__cart-btn')) {
+				openCart();
+			} else if (!e.target.closest('.cart__body') || e.target.closest('.cart__close-btn')) {
 				closeCart();
 			}
 		});

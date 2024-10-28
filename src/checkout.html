@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="uk">
+	@@include('html/_head.htm',{ "title":"Contacts" })
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{}) @@include('html/_cart.htm')
+			<main class="page">
+				<div class="checkout">
+					<div class="checkout__container">
+						<form action="#" class="checkout__form">
+							<h2 class="checkout__title title">Оформлення</h2>
+							<input type="text" placeholder="Імʼя" name="firstName" required class="checkout__input input" />
+							<input type="text" placeholder="Прізвищє" name="lastname" required class="checkout__input input" />
+							<select name="city" class="custom-select" required>
+								<option value="0" selected disabled>Місто</option>
+								<option value="teenager">Дніпро</option>
+								<option value="parent">Київ</option>
+							</select>
+							<select name="department" class="custom-select" required>
+								<option value="0" selected disabled>Оберіть відділення</option>
+								<option value="teenager">Відділення 1</option>
+								<option value="parent">Відділення 2</option>
+							</select>
+							<textarea name="comment" placeholder="Ваш коментар" class="checkout__textarea input"></textarea>
+							<button class="checkout__button button" type="submit">Оплатити</button>
+						</form>
+						<div class="checkout__info">
+							<ul class="cart__products">
+								<li class="cart__product product-in-cart">
+									<a href="#" class="product-in-cart__image">
+										<img src="@img/products/product-01.jpg" alt="" />
+									</a>
+									<div class="product-in-cart__content">
+										<h3 class="product-in-cart__title">
+											<a href="#" class="product-in-cart__link">#Cleansing Foam</a>
+										</h3>
+										<span class="product-in-cart__sum">465 грн</span>
+									</div>
+								</li>
+								<li class="cart__product product-in-cart">
+									<a href="#" class="product-in-cart__image">
+										<img src="@img/products/best.jpeg" alt="" />
+									</a>
+									<div class="product-in-cart__content">
+										<h3 class="product-in-cart__title">
+											<a href="#" class="product-in-cart__link">кастомний догляд</a>
+										</h3>
+										<span class="product-in-cart__sum">1309.05 грн</span>
+									</div>
+								</li>
+								<li class="cart__product product-in-cart">
+									<a href="#" class="product-in-cart__image">
+										<img src="@img/products/gft.png" alt="" />
+									</a>
+									<div class="product-in-cart__content">
+										<h3 class="product-in-cart__title">
+											<a href="#" class="product-in-cart__link">подарунковий пакет</a>
+										</h3>
+										<span class="product-in-cart__sum">50 грн</span>
+									</div>
+								</li>
+							</ul>
+							<div class="checkout__totals info-cart">
+								<div class="info-cart__item">
+									<span class="info-cart__label">Знижка:</span>
+									<span class="info-cart__value">0 грн</span>
+								</div>
+								<div class="info-cart__item">
+									<span class="info-cart__label">Доставка:</span>
+									<span class="info-cart__value">від 1000 грн - безкоштовна</span>
+								</div>
+								<div class="info-cart__item">
+									<span class="info-cart__label">До сплати:</span>
+									<span class="info-cart__value">1824.05 грн</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup-product.htm') @@include('html/_js.htm',{})
+	</body>
+</html>

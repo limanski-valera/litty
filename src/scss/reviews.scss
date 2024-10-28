@@ -11,14 +11,16 @@
 	&__title-decorator {
 		position: relative;
 		display: inline-block;
-		&::before {
-			content: '';
-			position: absolute;
-			top: 100%;
-			left: 0;
-			width: 100%;
-			padding-bottom: 7.002801%; /* 25/357 */
-			background: url('@img/review-title-decor.svg') center center / contain no-repeat;
+		@media (min-width: $mobile) {
+			&::before {
+				content: '';
+				position: absolute;
+				top: 100%;
+				left: 0;
+				width: 100%;
+				padding-bottom: 7.002801%; /* 25/357 */
+				background: url('@img/review-title-decor.svg') center center / contain no-repeat;
+			}
 		}
 	}
 	&__form {
@@ -46,8 +48,14 @@
 		}
 	}
 	&__input {
+		&::placeholder {
+			font-weight: 300;
+		}
 	}
 	&__textarea {
+		&::placeholder {
+			font-weight: 300;
+		}
 	}
 	&__button {
 		text-transform: uppercase;

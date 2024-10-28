@@ -1,0 +1,88 @@
+.text-page {
+	padding-top: toRem(40);
+	padding-bottom: toRem(120);
+	&__titles {
+		text-align: center;
+		line-height: 1.5;
+		font-weight: 700;
+		font-size: toRem(22);
+		letter-spacing: 0.4px;
+		margin-bottom: toRem(25);
+		color: #333;
+	}
+	&__title {
+	}
+	&__body {
+		color: #2c2c2c;
+		@include adaptiveValue('font-size', 20, 16);
+		letter-spacing: 0.4px;
+		line-height: 1.65;
+		& > *:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+		ol {
+			list-style: none;
+			counter-reset: li;
+			& > li {
+				&::before {
+					counter-increment: li;
+					content: counters(li, '.') '. ';
+				}
+				&:not(:last-child) {
+					margin-bottom: toRem(30);
+				}
+				ol {
+					& > li {
+						&:not(:last-child) {
+							margin-bottom: toRem(0);
+						}
+						& > ol {
+							counter-reset: second;
+							& > li {
+								&::before {
+									content: '';
+									margin-left: toRem(30);
+								}
+								&:nth-child(1)::before {
+									content: 'a)';
+								}
+								&:nth-child(2)::before {
+									content: 'б)';
+								}
+								&:nth-child(3)::before {
+									content: 'в)';
+								}
+								&:nth-child(4)::before {
+									content: 'г)';
+								}
+								&:nth-child(5)::before {
+									content: 'ґ)';
+								}
+								&:nth-child(6)::before {
+									content: 'д)';
+								}
+								&:nth-child(7)::before {
+									content: 'е)';
+								}
+								&:nth-child(8)::before {
+									content: 'є)';
+								}
+								&:nth-child(9)::before {
+									content: 'ж)';
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		ul {
+			li {
+				&::before {
+					content: '-';
+					margin-right: 30px;
+				}
+			}
+		}
+	}
+}

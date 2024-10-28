@@ -13,18 +13,20 @@ textarea {
 	display: block;
 	border: 1px solid $blackColor;
 	caret-color: inherit;
-	padding: toRem(16) toRem(19);
+	padding: toRem(16) toRem(19) toRem(14);
 	background-color: $whiteColor;
 	color: #949494;
-	font-size: toRem(17);
 	letter-spacing: 0.312px;
-	text-transform: uppercase;
 	border-radius: 30px !important;
 	outline: none;
 	transition: border-color 0.3s;
 	font-weight: 300;
 	&:focus {
 		border-color: $greenColor;
+	}
+	&::placeholder {
+		text-transform: uppercase;
+		font-size: toRem(17);
 	}
 	&._form-focus {
 	}

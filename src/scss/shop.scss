@@ -28,7 +28,7 @@
 			height: 100%;
 		}
 		@media (max-width: $mobile) {
-            padding-bottom: 60%;
+			padding-bottom: 60%;
 			width: 100%;
 			position: relative;
 		}
@@ -54,16 +54,18 @@
 			margin-bottom: toRem(50);
 		}
 		&--accent {
-			position: relative;
-			&::after {
-				content: '';
-				position: absolute;
-				top: calc(100% + toRem(5));
-				left: 50%;
-				transform: translateX(-50%);
-				width: 200%;
-				padding-bottom: 16%; /* 24/150 */
-				background: url('@img/shop/decor-main-title.png') center center / contain no-repeat;
+			@media (min-width: $mobile) {
+				position: relative;
+				&::after {
+					content: '';
+					position: absolute;
+					top: calc(100% + toRem(5));
+					left: 50%;
+					transform: translateX(-50%);
+					width: 200%;
+					padding-bottom: 16%; /* 24/150 */
+					background: url('@img/shop/decor-main-title.png') center center / contain no-repeat;
+				}
 			}
 		}
 	}

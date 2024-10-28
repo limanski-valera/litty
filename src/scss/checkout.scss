@@ -1,0 +1,36 @@
+.checkout {
+	@include adaptiveValue('padding-top', 80, 40);
+	@include adaptiveValue('padding-bottom', 80, 40);
+	&__container {
+		display: flex;
+		gap: toRem(30);
+	}
+	&__form {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(20);
+		flex: 1 1 auto;
+	}
+	&__title {
+		text-align: left;
+	}
+	&__input {
+	}
+	&__textarea {
+	}
+	&__button {
+	}
+	&__info {
+		@media (min-width: $tablet) {
+			flex: 0 0 40%;
+			.cart__products {
+				border-top: none;
+			}
+		}
+        @media (max-width:$tablet){
+            display: none;
+        }
+	}
+	&__totals {
+	}
+}

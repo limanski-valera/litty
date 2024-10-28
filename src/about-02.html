@@ -3,8 +3,7 @@
 	@@include('html/_head.htm',{ "title":"Дорослим" })
 	<body>
 		<div class="wrapper">
-			@@include('html/_header.htm',{})
-			@@include('html/_cart.htm')
+			@@include('html/_header.htm',{}) @@include('html/_cart.htm')
 			<main class="page page-about">
 				<div class="page-about__banner banner-about">
 					<div class="banner-about__content">
@@ -70,29 +69,30 @@
 				</div>
 				<div class="certificates-section">
 					<div class="certificates-section__container">
-						<ul class="certificates-section__list">
-							<li class="certificates-section__item">
-								<img src="@img/about/certificate-01.png" alt="" class="certificates-section__image" />
-							</li>
-							<li class="certificates-section__item">
-								<img src="@img/about/certificate-02.png" alt="" class="certificates-section__image" />
-							</li>
-							<li class="certificates-section__item">
-								<img src="@img/about/certificate-03.png" alt="" class="certificates-section__image" />
-							</li>
-						</ul>
 						<div class="certificates-section__description">
 							<p>Виготовлення усієї нашої продукції сертифіковане відповідно до міжнародних систем якості та безпеки</p>
 							<span>ISO 9001:2015</span>
 							<span>22000:2005</span>
 							<span>13485:2019</span>
 						</div>
+						<div class="certificates-section__swiper swiper">
+							<div class="certificates-section__wrapper swiper-wrapper">
+								<div class="certificates-section__slide swiper-slide">
+									<img src="@img/about/certificate-01.png" alt="" class="certificates-section__image" />
+								</div>
+								<div class="certificates-section__slide swiper-slide">
+									<img src="@img/about/certificate-02.png" alt="" class="certificates-section__image" />
+								</div>
+								<div class="certificates-section__slide swiper-slide">
+									<img src="@img/about/certificate-03.png" alt="" class="certificates-section__image" />
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>
-		@@include('html/_popup-product.htm')
-		@@include('html/_js.htm',{})
+		@@include('html/_popup-product.htm') @@include('html/_js.htm',{})
 	</body>
 </html>

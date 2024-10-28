@@ -31,25 +31,28 @@ function initSliders() {
 	if (document.querySelector('.banners__swiper')) {
 		// Вказуємо склас потрібного слайдера
 		// Створюємо слайдер
-		new Swiper('.banners__swiper', {
-			// Вказуємо склас потрібного слайдера
-			// Підключаємо модулі слайдера
-			// для конкретного випадку
-			modules: [Autoplay, EffectFade],
-			observer: true,
-			observeParents: true,
-			slidesPerView: 1,
-			spaceBetween: 0,
-			speed: 800,
-			loop: true,
-			lazy: true,
+		const sliders = document.querySelectorAll('.banners__swiper');
+		sliders.forEach((slider) => {
+			new Swiper(slider, {
+				// Вказуємо склас потрібного слайдера
+				// Підключаємо модулі слайдера
+				// для конкретного випадку
+				modules: [Autoplay, EffectFade],
+				observer: true,
+				observeParents: true,
+				slidesPerView: 1,
+				spaceBetween: 0,
+				speed: 800,
+				loop: true,
+				lazy: true,
 
-			// Ефекти
-			effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
+				// Ефекти
+				effect: 'fade',
+				autoplay: {
+					delay: 3000,
+					disableOnInteraction: false,
+				},
+			});
 		});
 	}
 	if (document.querySelector('.products__swiper')) {
@@ -152,13 +155,12 @@ function initSliders() {
 			speed: 800,
 			loop: true,
 			lazy: true,
+			centeredSlides: true,
 			breakpoints: {
 				0: {
-					slidesPerView: 1,
-				},
-				480: {
-					slidesPerView: 2,
-					spaceBetween: 10,
+					slidesPerView: 1.2,
+					spaceBetween: 40,
+					centeredSlides: true,
 				},
 				768: {
 					slidesPerView: 3,
@@ -193,6 +195,27 @@ function initSliders() {
 					clickable: true,
 				},
 			});
+		});
+	}
+	if (document.querySelector('.certificates-section__swiper')) {
+		new Swiper('.certificates-section__swiper', {
+			observer: true,
+			observeParents: true,
+			slidesPerView: 3,
+			speed: 800,
+			lazy: true,
+			spaceBetween: 20,
+			breakpoints: {
+				0: {
+					slidesPerView: 1,
+				},
+				480: {
+					slidesPerView: 2,
+				},
+				992: {
+					slidesPerView: 3,
+				}
+			}
 		});
 	}
 }

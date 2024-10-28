@@ -6,7 +6,6 @@
 	padding: toRem(15) toRem(16);
 	font-size: toRem(12);
 	text-align: center;
-	font-weight: 500;
 	letter-spacing: 0.196px;
 	border: 0.5px solid $mainColor;
 	background-color: $greenColor;
@@ -14,6 +13,10 @@
 	border-radius: 30px;
 	transition: background-color 0.3s;
 	justify-content: center;
+	text-transform: uppercase;
+	@media (min-width: $mobile) {
+		font-weight: 500;
+	}
 	@media (any-hover: hover) {
 		&:hover {
 			background-color: #e9fa7c;
@@ -25,5 +28,8 @@
 	&--white {
 		background-color: $whiteColor;
 		font-weight: 300;
+	}
+	@media (max-width: $mobile) {
+		padding: toRem(10) toRem(10);
 	}
 }
