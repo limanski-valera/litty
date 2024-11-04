@@ -239,7 +239,7 @@ function initSliders() {
 		new Swiper('.row-slider', {
 			modules: [Autoplay, FreeMode],
 			loop: true,
-			speed: 2000,
+			speed: 3000,
 			slidesPerView,
 			spaceBetween: gap,
 			freeMode: true,
