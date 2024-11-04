@@ -19,6 +19,9 @@
 		background-color: #e3ef91;
 		filter: blur(70px);
 		transform: translate(-39px, 100px) rotate(80deg);
+		@media (max-width:$mobile){
+			filter: blur(40px);
+		}
 	}
 	&::after {
 		width: toRem(120);

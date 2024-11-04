@@ -22,6 +22,9 @@
 			width: 23.684211%; /* 315/1330 */
 			padding-bottom: 22.556391%; /* 300/1330 */
 			filter: blur(100px);
+			@media (max-width: $mobile) {
+				filter: blur(50px);
+			}
 		}
 		&::before {
 			top: 0;
@@ -302,7 +305,7 @@
 		@media (max-width: toRem(1100)) {
 			text-align: center;
 		}
-		@media (max-width:$mobile){
+		@media (max-width: $mobile) {
 			margin-bottom: toRem(20);
 		}
 	}

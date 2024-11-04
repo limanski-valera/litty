@@ -71,13 +71,16 @@
 		border-radius: 300px;
 		border: 1px solid #949494;
 		overflow: hidden;
-		aspect-ratio: 278/417;
 		position: relative;
-		min-height: toRem(298);
 		&.swiper-slide-active {
 			opacity: 1;
 			visibility: visible;
 		}
+	}
+	&__image {
+		position: relative;
+		padding-bottom: 150%; /* 417/278 */
+		min-height: toRem(298);
 		img {
 			position: absolute;
 			top: 0;
