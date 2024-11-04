@@ -5,7 +5,7 @@
 	<title>Review</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20240801112519">
+	<link rel="stylesheet" href="css/style.min.css?_v=20241104155654">
 	<link rel="shortcut icon" href="favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -228,13 +228,8 @@
 				<div class="send-review__container">
 					<h2 class="send-review__title title">розкажіть про свій <span class="send-review__title-decorator">особистий</span> досвід</h2>
 					<form action="#" class="send-review__form">
+						<div data-rating="set" class="rating"></div>
 						<input type="text" placeholder="ваше ім'я" name="name" required class="send-review__input input" />
-						<input type="text" placeholder="місто проживання" name="city" required class="send-review__input input" />
-						<select name="category" class="custom-select" required>
-							<option value="" selected disabled>підліток / батьки</option>
-							<option value="teenager">Підліток</option>
-							<option value="parent">Батьки</option>
-						</select>
 						<textarea name="review" placeholder="ваш відгук" required class="send-review__textarea input"></textarea>
 						<button class="send-review__button button" type="submit">відправити</button>
 					</form>
@@ -388,7 +383,7 @@
 		</div>
 	</div>
 
-	<script src="js/app.min.js?_v=20240801112519"></script>
+	<script src="js/app.min.js?_v=20241104155654"></script>
 </body>
 
 </html>
