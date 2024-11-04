@@ -4763,7 +4763,7 @@
             new swiper_core_Swiper(".row-slider", {
                 modules: [ Autoplay, freeMode ],
                 loop: true,
-                speed: 2e3,
+                speed: 3e3,
                 slidesPerView,
                 spaceBetween: gap,
                 freeMode: true,
