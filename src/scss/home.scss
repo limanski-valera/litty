@@ -259,14 +259,14 @@
 //========================================================================================================================================================
 .products {
 	@include adaptiveValue('padding-top', 80, 40);
-	@include adaptiveValue('padding-bottom', 135, 70);
+	@include adaptiveValue('padding-bottom', 80, 40);
 	&__container {
 		max-width: toRem(1300);
 	}
 	&__header {
 		display: flex;
 		flex-direction: column;
-		@include adaptiveValue('margin-bottom', 90, 60);
+		@include adaptiveValue('margin-bottom', 90, 30);
 	}
 	&__title {
 		align-self: center;
@@ -359,13 +359,12 @@
 	}
 	&__swiper-area,
 	&__swiper-area--home {
-		position: relative;
-		padding: 0 toRem(110);
-		@media (max-width: $pc) {
-			padding: 0 toRem(70);
-		}
-		@media (max-width: $mobile) {
-			padding: 0 toRem(50);
+		@media (min-width: $mobile) {
+			position: relative;
+			padding: 0 toRem(110);
+			@media (max-width: $pc) {
+				padding: 0 toRem(70);
+			}
 		}
 		&[data-watch] {
 			opacity: 0;
@@ -380,18 +379,20 @@
 		}
 	}
 	&__buttons {
-		position: absolute;
-		top: 50%;
-		left: 0;
-		width: 100%;
-		justify-content: space-between;
-		display: flex;
-		align-items: center;
-		transform: translateY(-50%);
-		z-index: 3;
-		pointer-events: none;
+		@media (min-width: $mobile) {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 100%;
+			justify-content: space-between;
+			display: flex;
+			align-items: center;
+			transform: translateY(-50%);
+			z-index: 3;
+			pointer-events: none;
+		}
 		@media (max-width: $mobile) {
-			top: 35%;
+			display: none;
 		}
 	}
 	&__button {
@@ -403,28 +404,39 @@
 		z-index: 2;
 	}
 	&__swiper-wrapper {
+		@media (max-width: $mobile) {
+			display: grid !important;
+			grid-template-columns: repeat(2, 1fr);
+			gap: toRem(10);
+		}
 	}
 	&__swiper-slide {
-		visibility: hidden;
-		opacity: 0;
-		transition:
-			visibility 0.3s,
-			opacity 0.3s;
-		&.swiper-slide-active {
-			visibility: visible;
-			opacity: 1;
-		}
-		@media (min-width: $tablet) {
-			&.swiper-slide-next + .swiper-slide {
+		@media (min-width: $mobile) {
+			visibility: hidden;
+			opacity: 0;
+			transition:
+				visibility 0.3s,
+				opacity 0.3s;
+			&.swiper-slide-active {
 				visibility: visible;
 				opacity: 1;
 			}
-		}
-		@media (min-width: toRem(600)) {
+			@media (min-width: $tablet) {
+				&.swiper-slide-next + .swiper-slide {
+					visibility: visible;
+					opacity: 1;
+				}
+			}
 			&.swiper-slide-next {
 				visibility: visible;
 				opacity: 1;
 			}
+		}
+		@media (max-width:$mobile){
+			padding: toRem(10);
+			border-radius: 20px;
+			background-color: $whiteColor;
+			overflow: hidden;
 		}
 		.products__swiper-area--home & {
 			@media (min-width: $tablet) {
@@ -437,7 +449,7 @@
 					opacity: 1;
 				}
 			}
-			@media (min-width: toRem(600)) {
+			@media (min-width: $mobile) {
 				&.swiper-slide-next {
 					visibility: visible;
 					opacity: 1;

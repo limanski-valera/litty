@@ -69,7 +69,7 @@
 	font-weight: 500;
 	color: #373f47;
 	text-transform: uppercase;
-	@include adaptiveValue('font-size', 52, 32, 0, 1200, 480);
+	@include adaptiveValue('font-size', 52, 22, 0, 1200, 480);
 	&--best {
 		display: inline-block;
 		@include adaptiveValue('font-size', 32, 20, 0, 1200, 480);
@@ -197,7 +197,6 @@
 .text-block {
 	font-weight: 300;
 	line-height: 1.4;
-	color: $blackColor;
 	li {
 		padding-left: toRem(15);
 		position: relative;
@@ -224,6 +223,9 @@
 	display: flex;
 	flex-direction: column;
 	height: 100%;
+	@media (max-width: $mobile) {
+		z-index: 2;
+	}
 	&::before {
 		content: '';
 		position: absolute;
@@ -234,6 +236,9 @@
 		filter: blur(100px);
 		z-index: -1;
 		border-radius: 50%;
+		@media (max-width: $mobile) {
+			filter: blur(50px);
+		}
 	}
 	&._blue::before {
 		background-color: #abd7f0;
@@ -318,8 +323,8 @@
 	&__text {
 		line-height: 1.6;
 		font-weight: 300;
-		@include adaptiveValue('margin-bottom', 13, 26);
 		flex: 1 1 auto;
+		margin-bottom: toRem(15);
 	}
 	&__info {
 		display: flex;
@@ -332,7 +337,6 @@
 		}
 		@media (max-width: $mobile) {
 			flex-direction: column;
-			align-items: center;
 		}
 	}
 	&__price {
@@ -352,3 +356,50 @@
 .eapps-instagram-feed-posts-grid-load-more-enabled {
 	display: none !important;
 }
+//========================================================================================================================================================
+.swiper-pagination {
+	display: flex;
+	gap: toRem(8);
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+.swiper-pagination-bullet {
+	width: toRem(8);
+	height: toRem(8);
+	flex: 0 0 auto;
+	background-color: $greenColor;
+	border: 1px solid $blackColor;
+	opacity: 0.1;
+	transition: opacity 0.3s;
+	border-radius: 50%;
+	cursor: pointer;
+	&.swiper-pagination-bullet-active {
+		opacity: 1;
+		pointer-events: none;
+	}
+}
+//========================================================================================================================================================
+.row-slider {
+	display: block;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding: toRem(35) 0;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+	background: #dff183;
+	@include adaptiveValue('font-size', 22, 14);
+	@media (max-width:$mobile){
+		padding: toRem(20) 0;
+	}
+	&__wrapper {
+		transition-timing-function: linear;
+	}
+	&__slide {
+		white-space: nowrap;
+	}
+}
+//========================================================================================================================================================

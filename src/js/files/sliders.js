@@ -8,7 +8,7 @@
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Autoplay, EffectFade, Navigation, Pagination } from 'swiper/modules';
+import { Autoplay, EffectFade, FreeMode, Navigation, Pagination } from 'swiper/modules';
 /*
 Основні модулі слайдера:
 Navigation, Pagination, Autoplay, 
@@ -55,7 +55,7 @@ function initSliders() {
 			});
 		});
 	}
-	if (document.querySelector('.products__swiper')) {
+	if (document.querySelector('.products__swiper') && document.documentElement.clientWidth > 767.98) {
 		const sliders = document.querySelectorAll('.products__swiper-area');
 		sliders.forEach((elem) => {
 			const slider = elem.querySelector('.products__swiper');
@@ -82,8 +82,9 @@ function initSliders() {
 				breakpoints: {
 					0: {
 						slidesPerView: 1,
+						enabled: false,
 					},
-					600: {
+					768: {
 						slidesPerView: 2,
 						centeredSlides: false,
 					},
@@ -98,7 +99,6 @@ function initSliders() {
 			});
 		});
 	}
-
 	if (document.querySelector('.products__swiper-area--home')) {
 		const slider = document.querySelector('.products__swiper-area--home');
 		const buttonPrev = slider.querySelector('.swiper-button-prev');
@@ -214,8 +214,43 @@ function initSliders() {
 				},
 				992: {
 					slidesPerView: 3,
-				}
+				},
+			},
+		});
+	}
+	if (document.querySelector('.row-slider')) {
+		const slider = document.querySelector('.row-slider');
+		const slides = slider.querySelectorAll('.row-slider__slide');
+
+		const gap = 60;
+		let minSlideWidth = 0;
+
+		slides.forEach((slide) => {
+			const width = slide.clientWidth;
+
+			if (minSlideWidth === 0) minSlideWidth = width;
+			else {
+				minSlideWidth > width ? (minSlideWidth = width) : null;
 			}
+		});
+
+		const slidesPerView = document.documentElement.clientWidth / (minSlideWidth + gap);
+
+		new Swiper('.row-slider', {
+			modules: [Autoplay, FreeMode],
+			loop: true,
+			speed: 2000,
+			slidesPerView,
+			spaceBetween: gap,
+			freeMode: true,
+			allowTouchMove: false,
+			autoplay: {
+				delay: 0,
+				disableOnInteraction: false,
+			},
+			virtual: {
+				enabled: true,
+			},
 		});
 	}
 }

@@ -137,12 +137,12 @@
 		padding: toRem(12) toRem(18) toRem(13) toRem(25);
 		border-radius: 25px;
 		border: 1px solid #000;
-		@include adaptiveValue('font-size', 18, 16);
 		font-weight: 300;
 		line-height: 1.83;
 		letter-spacing: 0.4px;
 		position: relative;
 		background-color: #fff;
+		@include adaptiveValue('font-size', 18, 16);
 		&::after {
 			content: '';
 			position: absolute;
@@ -157,28 +157,29 @@
 }
 
 .simple-spollers {
+	display: flex;
+	flex-direction: column;
+	gap: toRem(5);
 	&__item {
-		border-bottom: 1px solid $blackColor;
+		border: 1px solid $mainColor;
+		border-radius: 10px;
 	}
 	&__title {
 		list-style: none;
 		cursor: pointer;
+		padding: toRem(14) toRem(40) toRem(14) toRem(8);
+		text-transform: uppercase;
+		position: relative;
+		font-size: toRem(18);
+		font-weight: 400;
 		&::marker,
 		&::-webkit-details-marker {
 			display: none;
 		}
-		padding: toRem(14) toRem(30) toRem(14) toRem(8);
-		font-size: toRem(14);
-		font-weight: 300;
-		text-transform: uppercase;
-		position: relative;
-		&._spoller-active {
-			font-weight: 400;
-		}
 		&::before {
 			position: absolute;
 			top: 50%;
-			right: 5px;
+			right: 10px;
 			transform: translate(0, -50%) rotate(-90deg);
 			transition: transform 0.3s;
 			font-size: toRem(10);
@@ -190,8 +191,7 @@
 	&__body {
 		padding: toRem(10) toRem(8) toRem(20);
 		font-weight: 300;
-		font-size: toRem(14);
-		font-weight: 200;
+		font-size: toRem(16);
 		p:not(:last-child) {
 			margin-bottom: toRem(20);
 		}

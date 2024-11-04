@@ -5,7 +5,7 @@
 	}
 	&__title {
 		@include adaptiveValue('font-size', 42, 20, 0, 1300, 768);
-		@include adaptiveValue('margin-bottom', 90, 40);
+		@include adaptiveValue('margin-bottom', 70, 30);
 		display: block;
 	}
 	&__title-decorator {
@@ -38,13 +38,14 @@
 			position: absolute;
 			pointer-events: none;
 			background-color: #e3ef91;
-			filter: blur(100px);
+			filter: blur(50px);
 			left: 50%;
 			top: 6.6%; /* 33/500 */
 			transform: translate(-50%);
 			width: 64.833333%; /* 389/600 */
 			padding-bottom: 62.166667%; /* 373/600 */
 			z-index: -1;
+			opacity: 0.1;
 		}
 	}
 	&__input {

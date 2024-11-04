@@ -121,7 +121,7 @@ function initSpecialPopupShow() {
 }
 
 function hideInstagramWidgetBranding() {
-	const branding = document.querySelector('.elfsight-app-26bdb88f-8b1a-4b24-b4dd-177aa578bba4 > a');
+	const branding = document.querySelector('.elfsight-app-433689d7-d8a2-4c71-aac0-ff6feef15d1e > a');
 
 	if (branding) {
 		branding.style = 'display:none';

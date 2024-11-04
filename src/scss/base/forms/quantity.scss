@@ -6,7 +6,7 @@
 	display: flex;
 	border: 1px solid $blackColor;
 	background-color: $whiteColor;
-	border-radius: 15px;
+	border-radius: 30px;
 	// .quantity__button
 	&__button {
 		flex: 0 0 30px;
@@ -44,6 +44,7 @@
 	// .quantity__input
 	&__input {
 		flex: 1 1 auto;
+		pointer-events: none;
 		input {
 			height: 100%;
 			color: $mainColor;
