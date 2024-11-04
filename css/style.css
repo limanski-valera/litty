@@ -813,7 +813,8 @@ body::after {
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
   border-radius: 50%;
-  pointer-events: none
+  pointer-events: none;
+  overflow: visible!important
 }
 .mail-form__button {
   font-size: 1.0625rem;
