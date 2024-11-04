@@ -2688,15 +2688,18 @@ body::after {
   border-radius: 300px;
   border: 1px solid #949494;
   overflow: hidden;
-  aspect-ratio: 278/417;
-  position: relative;
-  min-height: 18.625rem
+  position: relative
 }
 .product-in-popup__slide.swiper-slide-active {
   opacity: 1;
   visibility: visible
 }
-.product-in-popup__slide img {
+.product-in-popup__image {
+  position: relative;
+  padding-bottom: 150%;
+  min-height: 18.625rem
+}
+.product-in-popup__image img {
   position: absolute;
   top: 0;
   left: 0;
@@ -4034,6 +4037,11 @@ body::after {
   .banner-about {
     padding: 0 .3125rem
   }
+  .banner-about__image::after,
+  .banner-about__image::before {
+    -webkit-filter: blur(50px);
+    filter: blur(50px)
+  }
   .about-toggle__buttons {
     padding: .125rem
   }
@@ -4066,6 +4074,10 @@ body::after {
   }
   .contacts-info {
     padding-bottom: 6.25rem
+  }
+  .special-main::before {
+    -webkit-filter: blur(40px);
+    filter: blur(40px)
   }
   .special-main__container {
     flex-direction: column
@@ -5377,6 +5389,12 @@ body::after {
 @media (min-width:61.99875em) and (max-width:76.875em) {
   .main-block__image {
     bottom: 20%
+  }
+}
+@media (min-width:47.99875em) and (max-width:47.99875em) {
+  .main-block__image::after {
+    -webkit-filter: blur(50px);
+    filter: blur(50px)
   }
 }
 @media (min-width:47.99875em) and (max-width:76.875em) {
