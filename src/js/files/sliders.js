@@ -99,7 +99,7 @@ function initSliders() {
 			});
 		});
 	}
-	if (document.querySelector('.products__swiper-area--home')) {
+	if (document.querySelector('.products__swiper-area--home') && document.documentElement.clientWidth > 767.98) {
 		const slider = document.querySelector('.products__swiper-area--home');
 		const buttonPrev = slider.querySelector('.swiper-button-prev');
 		const buttonNext = slider.querySelector('.swiper-button-next');
